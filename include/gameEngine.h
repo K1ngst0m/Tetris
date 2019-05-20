@@ -7,6 +7,10 @@ class GameState;
 class GameEngine{
 public:
     GameEngine(); //SDL初始化
+    void execute();
+    void input();
+    void update();
+    void render();
 
     //窗口长宽
     int width;

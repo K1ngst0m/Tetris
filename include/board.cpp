@@ -18,8 +18,8 @@ void Board::cleanPerRows(int row){
     for(int j = 0; j < COLS; j++)
        color[row][j] = color[row+1][j];
 
-    for(int row = 0; row < COLS; row++)
-        color[ROWS-1][row] = -1;
+    for(int col = 0; col < COLS; col++)
+        color[ROWS-1][col] = -1;
 }
 
 void Board::letItGo(){

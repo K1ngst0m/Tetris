@@ -23,7 +23,6 @@ Tetris::Tetris(int n_type){
     }
 
 }
-
 void Tetris::rotateLeft(){
     for(int i = 0; i < SIZE; i++){
         int t = relatLocate[i][0];
@@ -31,7 +30,6 @@ void Tetris::rotateLeft(){
         relatLocate[i][1] = t;
     }
 }
-
 void Tetris::rotateRight(){
     for(int i = 0; i < SIZE; i++){
         int t = relatLocate[i][0];
@@ -40,4 +38,24 @@ void Tetris::rotateRight(){
     }
 }
 
-void Tetris::
+void Tetris::getShadow(Board *board, int shadow_y[]){
+    int t_y = y;
+    Status t_s = status;
+
+    while(!(status == LANDED)){
+        for(int i = 0; i < SIZE; i++)
+            if(getY(i) == board->ROWS || board->color[getY(i)][getX(i)] != -1){
+                status = LANDED;
+                y--;
+                break;
+            }
+        if(!(status == LANDED))
+            y++;
+    }
+
+    for(int i = 0; i < SIZE; i++)
+        shadow_y[i] = getY(i);
+
+    y = t_y;
+    status = t_s;
+}

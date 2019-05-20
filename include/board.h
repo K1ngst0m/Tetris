@@ -11,11 +11,11 @@ public:
     static const int HEI_PER_BLOCK = WINDOW_HEIGHT / COLS; //行高度
     static const int WTH_PER_BLOCK = WINDOW_WIDTH / ROWS;  //列高度
 
-    int color[ROWS][COLS]; //二维数组表示方块坐标
+    int color[ROWS][COLS];     //二维数组表示方块坐标
 
-    Board();    //方块池初始化
+    Board();                   //方块池初始化
 
-    void letItGo();
+    void letItGo();             //消除且计分
 
 private:
     int score;

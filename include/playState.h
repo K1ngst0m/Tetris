@@ -14,7 +14,7 @@ public:
 
     static const int GAME_OFFSET = 20;
 
-    void init(GameEngine* game);
+    void init(GameEngine* game);        //系统初始化
     void cleanUp(GameEngine *game);
 
     void pause();

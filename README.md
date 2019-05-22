@@ -1,13 +1,17 @@
 # C++实训: 俄罗斯方块
 
-## 开发环境
+## 开发环境及依赖
 * linux
 * SDL2
+    * SDL_ttf
+    * SDL_image
+* irrklang
 
 ## 开发工具
-* 文本编辑器: vim;
+* 文本编辑器: vim
 * 编译器: clang++
-* 图片处理: sai2, photoshop
+* 图片制作处理: sai2, photoshop
+* 声音制作处理: flstudio
 
 ## 开发内容
 * 游戏引擎

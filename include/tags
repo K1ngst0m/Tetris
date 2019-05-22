@@ -1,0 +1,105 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+Board	board.cpp	/^Board::Board(){$/;"	f	class:Board
+Board	board.h	/^class Board{ \/\/方块池$/;"	c
+COLS	board.h	/^    static const int COLS = 15; \/\/列数$/;"	m	class:Board	typeref:typename:const int
+FALLING	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+GAME_OFFSET	playState.h	/^    static const int GAME_OFFSET = 20;$/;"	m	class:PlayState	typeref:typename:const int
+GameEngine	gameEngine.cpp	/^GameEngine::GameEngine(){$/;"	f	class:GameEngine
+GameEngine	gameEngine.h	/^class GameEngine{$/;"	c
+GameState	gameState.h	/^    GameState(){}$/;"	f	class:GameState
+GameState	gameState.h	/^class GameState{$/;"	c
+HEI_PER_BLOCK	board.h	/^    static const int HEI_PER_BLOCK = WINDOW_HEIGHT \/ COLS; \/\/行高度$/;"	m	class:Board	typeref:typename:const int
+INACTIVE	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+IRRKLANGCALLCONV	irrKlang.h	/^#define IRRKLANGCALLCONV /;"	d
+IRRKLANGCALLCONV	irrKlang.h	/^#define IRRKLANGCALLCONV$/;"	d
+IRRKLANG_API	irrKlang.h	/^        #define IRRKLANG_API /;"	d
+IRRKLANG_API	irrKlang.h	/^    #define IRRKLANG_API$/;"	d
+IRR_KLANG_VERSION	irrKlang.h	/^#define IRR_KLANG_VERSION /;"	d
+LANDED	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+LEFT	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+Movement	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	g	class:Tetris
+NOLORS	playState.h	/^    static const int NOLORS = 7;$/;"	m	class:PlayState	typeref:typename:const int
+NONE	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+PlayState	playState.h	/^    PlayState(){}$/;"	f	class:PlayState
+PlayState	playState.h	/^class PlayState : public GameState{$/;"	c
+RIGHT	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+ROWS	board.h	/^    static const int ROWS = 30; \/\/行数$/;"	m	class:Board	typeref:typename:const int
+SIZE	tetris.h	/^    static const int SIZE = 4; \/\/方块边界$/;"	m	class:Tetris	typeref:typename:const int
+Status	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	g	class:Tetris
+Tetris	tetris.cpp	/^Tetris::Tetris(int n_type){$/;"	f	class:Tetris
+Tetris	tetris.h	/^class Tetris{$/;"	c
+WAITING	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+WINDOW_HEIGHT	board.h	/^    static const int WINDOW_HEIGHT = 600;\/\/高度$/;"	m	class:Board	typeref:typename:const int
+WINDOW_WIDTH	board.h	/^    static const int WINDOW_WIDTH = 300;\/\/宽度$/;"	m	class:Board	typeref:typename:const int
+WTH_PER_BLOCK	board.h	/^    static const int WTH_PER_BLOCK = WINDOW_WIDTH \/ ROWS;  \/\/列高度$/;"	m	class:Board	typeref:typename:const int
+__IRR_KLANG_H_INCLUDED__	irrKlang.h	/^#define __IRR_KLANG_H_INCLUDED__$/;"	d
+block_table	tetris.cpp	/^const int Tetris::block_table[7][4][2] = {$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_table	tetris.h	/^    static const int block_table[7][4][2];$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_texture	playState.h	/^    SDL_Texture* block_texture;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+board	playState.h	/^    Board* board;$/;"	m	class:PlayState	typeref:typename:Board *
+cleanPerRows	board.cpp	/^void Board::cleanPerRows(int row){$/;"	f	class:Board	typeref:typename:void
+color	board.h	/^    int color[ROWS][COLS];     \/\/二维数组表示方块坐标$/;"	m	class:Board	typeref:typename:int[][]
+exit	gameEngine.h	/^    bool exit;$/;"	m	class:GameEngine	typeref:typename:bool
+exit	playState.h	/^    bool exit;$/;"	m	class:PlayState	typeref:typename:bool
+fall	tetris.h	/^    bool fall;      \/\/是否快速下落$/;"	m	class:Tetris	typeref:typename:bool
+font_game_over	playState.h	/^    TTF_Font*   font_game_over;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_image_game_over	playState.h	/^    SDL_Texture* font_image_game_over;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_new_game	playState.h	/^    SDL_Texture* font_image_new_game;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_pause	playState.h	/^    SDL_Texture* font_image_pause;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_quit	playState.h	/^    SDL_Texture* font_image_quit;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_score	playState.h	/^    SDL_Texture* font_image_score;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_score_text	playState.h	/^    SDL_Texture* font_image_score_text;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_tetris	playState.h	/^    SDL_Texture* font_image_tetris;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_new_game	playState.h	/^    TTF_Font*   font_new_game;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_pause	playState.h	/^    TTF_Font*   font_pause;     \/\/暂停时显示$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_quit	playState.h	/^    TTF_Font*   font_quit;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_score	playState.h	/^    TTF_Font*   font_score;     \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_score_text	playState.h	/^    TTF_Font*   font_score_text;\/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_tetris	playState.h	/^    TTF_Font*   font_tetris;    \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+game_over	playState.h	/^    bool game_over;$/;"	m	class:PlayState	typeref:typename:bool
+getShadow	tetris.cpp	/^void Tetris::getShadow(Board *board, int shadow_y[]){$/;"	f	class:Tetris	typeref:typename:void
+getX	tetris.h	/^    int getX(int i){return x + relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:int
+getY	tetris.h	/^    int getY(int i){return x + relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:int
+height	gameEngine.h	/^    int height;$/;"	m	class:GameEngine	typeref:typename:int
+init	playState.cpp	/^void PlayState::init(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+irrklang	irrKlang.h	/^namespace irrklang$/;"	n
+judgeFull	board.cpp	/^bool Board::judgeFull(int i){$/;"	f	class:Board	typeref:typename:bool
+letItGo	board.cpp	/^void Board::letItGo(){$/;"	f	class:Board	typeref:typename:void
+loadTexture	reuse.cpp	/^SDL_Texture* loadTexture(const std::string &file,$/;"	f	typeref:typename:SDL_Texture *
+m_playstate	playState.cpp	/^PlayState PlayState::m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+m_playstate	playState.h	/^    static PlayState m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+movement	tetris.h	/^    Movement movement;$/;"	m	class:Tetris	typeref:typename:Movement
+newgamedown	playState.h	/^    bool newgamedown;$/;"	m	class:PlayState	typeref:typename:bool
+newgameup	playState.h	/^    bool newgameup;$/;"	m	class:PlayState	typeref:typename:bool
+newgamex1	playState.h	/^    int newgamex1;$/;"	m	class:PlayState	typeref:typename:int
+next_tetris	playState.h	/^    Tetris* next_tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
+paused	playState.h	/^    bool paused;$/;"	m	class:PlayState	typeref:typename:bool
+quitdown	playState.h	/^    bool quitdown;$/;"	m	class:PlayState	typeref:typename:bool
+quitup	playState.h	/^    bool quitup;$/;"	m	class:PlayState	typeref:typename:bool
+relatLocate	tetris.h	/^    int (*relatLocate)[2];  \/\/相对中心方块坐标$/;"	m	class:Tetris	typeref:typename:int (*)[2]
+renderText	reuse.cpp	/^SDL_Texture* renderText(const std::string &message,$/;"	f	typeref:typename:SDL_Texture *
+renderTexture	reuse.cpp	/^void renderTexture(SDL_Texture* tex,$/;"	f	typeref:typename:void
+renderer	gameEngine.h	/^    SDL_Renderer * renderer;$/;"	m	class:GameEngine	typeref:typename:SDL_Renderer *
+rotate	tetris.h	/^    bool rotate;    \/\/是否旋转$/;"	m	class:Tetris	typeref:typename:bool
+rotateLeft	tetris.cpp	/^void Tetris::rotateLeft(){$/;"	f	class:Tetris	typeref:typename:void
+rotateRight	tetris.cpp	/^void Tetris::rotateRight(){$/;"	f	class:Tetris	typeref:typename:void
+score	board.h	/^    int score;$/;"	m	class:Board	typeref:typename:int
+setPoint	tetris.h	/^    void setPoint(int xx, int yy){x = xx; y = yy;}$/;"	f	class:Tetris	typeref:typename:void
+setX	tetris.h	/^    void setX(int xx){x = xx;}$/;"	f	class:Tetris	typeref:typename:void
+setY	tetris.h	/^    void setY(int yy){y = yy;}$/;"	f	class:Tetris	typeref:typename:void
+shift	tetris.h	/^    bool shift;     \/\/左转(true)&&k,右转(false)$/;"	m	class:Tetris	typeref:typename:bool
+speedup	tetris.h	/^    bool speedup;   \/\/是否加速$/;"	m	class:Tetris	typeref:typename:bool
+status	tetris.h	/^    Status status;$/;"	m	class:Tetris	typeref:typename:Status
+tetris	playState.h	/^    Tetris* tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
+type	tetris.h	/^    int type;               \/\/方块种类(0-6)$/;"	m	class:Tetris	typeref:typename:int
+white	playState.h	/^    SDL_Color   white;$/;"	m	class:PlayState	typeref:typename:SDL_Color
+width	gameEngine.h	/^    int width;$/;"	m	class:GameEngine	typeref:typename:int
+window	gameEngine.h	/^    SDL_Window * window;$/;"	m	class:GameEngine	typeref:typename:SDL_Window *
+x	tetris.h	/^    int x, y;               \/\/方块型相对位置中(0,0)的全局坐标$/;"	m	class:Tetris	typeref:typename:int
+y	tetris.h	/^    int x, y;               \/\/方块型相对位置中(0,0)的全局坐标$/;"	m	class:Tetris	typeref:typename:int

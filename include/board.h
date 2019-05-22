@@ -1,6 +1,7 @@
 
 //游戏窗口边界 Board类
 class Board{ //方块池
+
 public:
     static const int WINDOW_WIDTH = 300;//宽度
     static const int WINDOW_HEIGHT = 600;//高度
@@ -21,4 +22,5 @@ private:
     int score;
     bool judgeFull(int row); //判断是否满行, 是返回true, 否返回false
     void cleanPerRows(int row); //清除行
+
 };

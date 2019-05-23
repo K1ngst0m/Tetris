@@ -16,11 +16,14 @@ public:
 
     //改变坐标//
     void setPoint(int xx, int yy){x = xx; y = yy;}
-    void setX(int xx){x = xx;}
-    void setY(int yy){y = yy;}
+
+    void setX(int i, int new_x){x = new_x - relatLocate[i][0];}
+    void setY(int i, int new_y){y = new_y - relatLocate[i][1];}
     //获取坐标//
     int getX(int i){return x + relatLocate[i][0];}
     int getY(int i){return x + relatLocate[i][1];}
+
+    void add_to_x(int x_offset){x += x_offset;}
 
     Tetris(int n_type);
 
@@ -33,6 +36,10 @@ public:
     int x, y;               //方块型相对位置中(0,0)的全局坐标
     int (*relatLocate)[2];  //相对中心方块坐标
     int type;               //方块种类(0-6)
+
+    bool has_landed(){return status == LANDED;}
+    void lands() {status = LANDED;}
+    void drop()  {status = FALLING;}
 
     ////开关////
     bool fall;      //是否快速下落

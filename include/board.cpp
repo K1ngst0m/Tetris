@@ -28,3 +28,17 @@ void Board::letItGo(){
             cleanPerRows(row);
 }
 
+bool Board::blockAdd(Tetris* block){
+    for(int i = 0; i < block->SIZE; i++){
+        int x = block->getX(i);
+        int y = block->getY(i);
+
+        //方块池满判断
+        if (y <= 0)
+            return false;
+        else
+            color[y][x] = block->type;
+    }
+    return true;
+}
+

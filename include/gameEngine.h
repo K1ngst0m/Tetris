@@ -12,6 +12,8 @@ public:
     void update();
     void render();
 
+    void quit(){exit = true;}
+
     //窗口长宽
     int width;
     int height;

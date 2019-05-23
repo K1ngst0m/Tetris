@@ -1,6 +1,6 @@
-
+#include"tetris.h"
 //游戏窗口边界 Board类
-class Board{ //方块池
+class Board{ //方块池/游戏边界
 
 public:
     static const int WINDOW_WIDTH = 300;//宽度
@@ -9,14 +9,17 @@ public:
     static const int ROWS = 30; //行数
     static const int COLS = 15; //列数
 
-    static const int HEI_PER_BLOCK = WINDOW_HEIGHT / COLS; //行高度
-    static const int WTH_PER_BLOCK = WINDOW_WIDTH / ROWS;  //列高度
+    static const int HEI_PER_BLOCK = WINDOW_HEIGHT / COLS; //单行高度
+    static const int WTH_PER_BLOCK = WINDOW_WIDTH / ROWS;  //单列高度
 
     int color[ROWS][COLS];     //二维数组表示方块坐标
+    bool render_score = 1;
 
-    Board();                   //方块池初始化
+    Board();                   //方块池初始化: 分数=0, 方块池清空
 
-    void letItGo();             //消除且计分
+    void letItGo();                             //消除且计分
+    int getScore(){return score;}               //获取分数
+    bool blockAdd(Tetris* block);               //方块堆叠
 
 private:
     int score;

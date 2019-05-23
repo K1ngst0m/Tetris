@@ -1,7 +1,7 @@
 
 #include"gameEngine.h"
-#include"iostream"
-#include<cstdlib>
+#include<iostream>
+#include"gameState.h"
 
 GameEngine::GameEngine(){
     if(SDL_Init(SDL_INIT_EVERYTHING) == -1){

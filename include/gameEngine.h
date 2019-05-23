@@ -1,4 +1,5 @@
-
+#ifndef _GAMEENGINE_H
+#define _GAMEENGINE_H
 #include<SDL2/SDL.h>
 #include<vector>
 
@@ -27,4 +28,4 @@ private:
     bool exit;
 
 };
-
+#endif

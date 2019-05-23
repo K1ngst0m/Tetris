@@ -1,7 +1,11 @@
+#ifndef _PLAYSTATE_H
+#define _PLAYSTATE_H
+
 #include"irrKlang.h"
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 #include<SDL2/SDL_image.h>
+#include<random>
 
 #include"gameState.h"
 
@@ -88,3 +92,5 @@ private:
     bool game_over;     //当游戏结束时返回true
     bool exit;          //当退出游戏是返回quit
 };
+
+#endif

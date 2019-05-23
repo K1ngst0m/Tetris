@@ -1,5 +1,7 @@
-#include"tetris.h"
-//游戏窗口边界 Board类
+
+#ifndef _BOARD_H
+#define _BOARD_H
+
 class Board{ //方块池/游戏边界
 
 public:
@@ -27,3 +29,5 @@ private:
     void cleanPerRows(int row); //清除行
 
 };
+
+#endif

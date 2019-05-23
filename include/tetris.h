@@ -1,3 +1,5 @@
+#ifndef _TETRIS_H
+#define _TETRIS_H
 
 class Board;
 
@@ -47,3 +49,4 @@ public:
     bool shift;     //左转(true)&&k,右转(false)
     bool rotate;    //是否旋转
 };
+#endif

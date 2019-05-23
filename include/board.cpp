@@ -1,4 +1,5 @@
 #include"board.h"
+#include"tetris.h"
 
 Board::Board(){
     score = 0;

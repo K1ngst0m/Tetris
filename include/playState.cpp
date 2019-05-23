@@ -1,6 +1,7 @@
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 #include<SDL2/SDL_image.h>
+#include"gameEngine.h"
 #include"reuse.h"
 #include"playState.h"
 #include"board.h"
@@ -13,10 +14,12 @@ namespace{
 
 }
 
+PlayState PlayState::m_playstate;
+
 class Tetris;
 class Board;
 
-PlayState PlayState::m_playstate;
+//PlayState PlayState::m_playstate;
 
 void PlayState::init(GameEngine* game){
 

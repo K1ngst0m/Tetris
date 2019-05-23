@@ -1,3 +1,6 @@
+#ifndef _REUSE_H
+#define _REUSE_H
+
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 #include<SDL2/SDL_image.h>
@@ -25,3 +28,4 @@ SDL_Texture* renderText(const std::string &message,
 //加载图片, 得到一个SDL_texture指针
 SDL_Texture* loadTexture(const std::string &file,
                          SDL_Renderer* ren);
+#endif

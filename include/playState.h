@@ -19,9 +19,11 @@ public:
     static const int GAME_OFFSET = 20;
 
     void init(GameEngine* game);        //系统初始化
-    void reset();                       //重置游戏
     void cleanUp(GameEngine *game);     //清理内存
 
+    void reset();                       //重置游戏
+    void resume();
+    void pause();
 
     void input(GameEngine* game);       //设置键盘, 鼠标, 窗口事件
     void update(GameEngine* game);      //事件更新

@@ -113,6 +113,14 @@ void PlayState::cleanUp(GameEngine* game){
     SDL_Quit();
 }
 
+void PlayState::pause(){
+    paused = true;
+}
+
+void PlayState::resume(){
+    paused = false;
+}
+
 void PlayState::input(GameEngine* game){
     SDL_Event event;
     while (SDL_PollEvent(&event)){
@@ -124,8 +132,8 @@ void PlayState::input(GameEngine* game){
         //键盘按下事件
         if(event.type == SDL_KEYDOWN){
             if(event.key.keysym.sym == SDLK_p){
-                if(paused)      paused = false;
-                else            paused = true; }
+                if(paused)      resume();
+                else            pause(); }
 
             //方块操作
         if(!paused && !tetris->fall){
@@ -234,7 +242,7 @@ void PlayState::update(GameEngine* game){
     // 方块落地时处理
     if (tetris->has_landed()){
         tetris->fall = false;
-        if(!board->blockAdd(tetris)){
+        if(!board->add(tetris)){
             game_over = true;
             return; }
     }else if(tetris->fall){

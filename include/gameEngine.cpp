@@ -30,3 +30,50 @@ GameEngine::GameEngine(){
 
     exit = false;
 }
+
+void GameEngine::execute(){
+    while(!exit){
+        input();
+        update();
+        render();
+    }
+    clean_up();
+}
+
+void GameEngine::clean_up(){
+    while(!states.empty()){
+        states.back()->cleanUp(this);
+        states.pop_back();
+    }
+
+    SDL_Quit();
+}
+
+void GameEngine::push_state(GameState* state){
+    if(!states.empty())
+        states.back()->pause();
+
+    states.push_back(state);
+    states.back()->pause();
+}
+
+void GameEngine::pop_state(){
+    if(!states.empty()){
+        states.back()->cleanUp(this);
+        states.pop_back();
+    }
+    if(!states.empty())
+        states.back()->resume();
+}
+
+void GameEngine::input(){
+    states.back()->input(this);
+}
+
+void GameEngine::update(){
+    states.back()->update(this);
+}
+
+void GameEngine::render(){
+    states.back()->render(this);
+}

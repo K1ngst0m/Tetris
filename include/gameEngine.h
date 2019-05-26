@@ -8,6 +8,13 @@ class GameState;
 class GameEngine{
 public:
     GameEngine(); //SDL初始化
+
+    void clean_up();
+
+    void change_state(GameState* state);
+    void push_state(GameState* state);
+    void pop_state();
+
     void execute();
     void input();
     void update();
@@ -25,6 +32,7 @@ public:
 
 private:
 
+    std::vector<GameState*> states;
     bool exit;
 
 };

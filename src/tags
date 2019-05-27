@@ -1,0 +1,404 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+ARCHITECTURE_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
+Board	board.cpp	/^Board::Board(){$/;"	f	class:Board
+Board	board.h	/^class Board{ \/\/方块池\/游戏边界$/;"	c
+CMAKE_AR	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/usr\/bin\/ar")$/;"	v
+CMAKE_AR	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_AR "\/usr\/bin\/ar")$/;"	v
+CMAKE_C11_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")$/;"	v
+CMAKE_C90_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C90_COMPILE_FEATURES "c_std_90;c_function_prototypes")$/;"	v
+CMAKE_C99_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C99_COMPILE_FEATURES "c_std_99;c_restrict;c_variadic_macros")$/;"	v
+CMAKE_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_C_CL_SHOWINCLUDES_PREFIX}")$/;"	v
+CMAKE_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_CXX_CL_SHOWINCLUDES_PREFIX}")$/;"	v
+CMAKE_COMPILER_IS_CYGWIN	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_CYGWIN )$/;"	v
+CMAKE_COMPILER_IS_CYGWIN	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_COMPILER_IS_CYGWIN )$/;"	v
+CMAKE_COMPILER_IS_GNUCC	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCC 1)$/;"	v
+CMAKE_COMPILER_IS_GNUCXX	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCXX 1)$/;"	v
+CMAKE_COMPILER_IS_MINGW	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_MINGW )$/;"	v
+CMAKE_COMPILER_IS_MINGW	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_COMPILER_IS_MINGW )$/;"	v
+CMAKE_CROSSCOMPILING	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
+CMAKE_CXX11_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11;cxx_alias_templates;cxx_alignas;cxx_alignof;cxx_att/;"	v
+CMAKE_CXX14_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14;cxx_aggregate_default_initializers;cxx_attribute_de/;"	v
+CMAKE_CXX17_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX17_COMPILE_FEATURES "cxx_std_17")$/;"	v
+CMAKE_CXX20_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX20_COMPILE_FEATURES "cxx_std_20")$/;"	v
+CMAKE_CXX98_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX98_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters")$/;"	v
+CMAKE_CXX_ABI_COMPILED	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_ABI_COMPILED TRUE)$/;"	v
+CMAKE_CXX_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX "")$/;"	v
+CMAKE_CXX_COMPILER	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER "\/usr\/bin\/c++")$/;"	v
+CMAKE_CXX_COMPILER_ABI	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ABI "ELF")$/;"	v
+CMAKE_CXX_COMPILER_AR	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_AR "\/usr\/bin\/gcc-ar")$/;"	v
+CMAKE_CXX_COMPILER_ARG1	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ARG1 "")$/;"	v
+CMAKE_CXX_COMPILER_ENV_VAR	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ENV_VAR "CXX")$/;"	v
+CMAKE_CXX_COMPILER_ID	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ID "GNU")$/;"	v
+CMAKE_CXX_COMPILER_ID_RUN	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ID_RUN 1)$/;"	v
+CMAKE_CXX_COMPILER_LOADED	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LOADED 1)$/;"	v
+CMAKE_CXX_COMPILER_RANLIB	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_RANLIB "\/usr\/bin\/gcc-ranlib")$/;"	v
+CMAKE_CXX_COMPILER_VERSION	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_VERSION "8.3.0")$/;"	v
+CMAKE_CXX_COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")$/;"	v
+CMAKE_CXX_COMPILER_WORKS	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_WORKS TRUE)$/;"	v
+CMAKE_CXX_COMPILER_WRAPPER	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_WRAPPER "")$/;"	v
+CMAKE_CXX_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters;cxx_std_11;cxx_alias/;"	v
+CMAKE_CXX_IGNORE_EXTENSIONS	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IGNORE_EXTENSIONS inl;h;hpp;HPP;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
+CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/include\/c++\/8.3.0;\/usr\/include\/c++\/8.3./;"	v
+CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/8.3.0;\/usr\/lib;/;"	v
+CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
+CMAKE_CXX_IMPLICIT_LINK_LIBRARIES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")$/;"	v
+CMAKE_CXX_LIBRARY_ARCHITECTURE	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LIBRARY_ARCHITECTURE "")$/;"	v
+CMAKE_CXX_LINKER_PREFERENCE	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PREFERENCE 30)$/;"	v
+CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)$/;"	v
+CMAKE_CXX_PLATFORM_ID	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_PLATFORM_ID "Linux")$/;"	v
+CMAKE_CXX_SIMULATE_ID	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIMULATE_ID "")$/;"	v
+CMAKE_CXX_SIMULATE_VERSION	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIMULATE_VERSION "")$/;"	v
+CMAKE_CXX_SIZEOF_DATA_PTR	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIZEOF_DATA_PTR "8")$/;"	v
+CMAKE_CXX_SOURCE_FILE_EXTENSIONS	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;mm;CPP)$/;"	v
+CMAKE_CXX_STANDARD_COMPUTED_DEFAULT	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "14")$/;"	v
+CMAKE_C_ABI_COMPILED	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_ABI_COMPILED TRUE)$/;"	v
+CMAKE_C_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")$/;"	v
+CMAKE_C_COMPILER	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER "\/usr\/bin\/cc")$/;"	v
+CMAKE_C_COMPILER_ABI	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ABI "ELF")$/;"	v
+CMAKE_C_COMPILER_AR	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_AR "\/usr\/bin\/gcc-ar")$/;"	v
+CMAKE_C_COMPILER_ARG1	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARG1 "")$/;"	v
+CMAKE_C_COMPILER_ENV_VAR	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ENV_VAR "CC")$/;"	v
+CMAKE_C_COMPILER_ID	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID "GNU")$/;"	v
+CMAKE_C_COMPILER_ID_RUN	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID_RUN 1)$/;"	v
+CMAKE_C_COMPILER_LOADED	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LOADED 1)$/;"	v
+CMAKE_C_COMPILER_RANLIB	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_RANLIB "\/usr\/bin\/gcc-ranlib")$/;"	v
+CMAKE_C_COMPILER_VERSION	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION "8.3.0")$/;"	v
+CMAKE_C_COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION_INTERNAL "")$/;"	v
+CMAKE_C_COMPILER_WORKS	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WORKS TRUE)$/;"	v
+CMAKE_C_COMPILER_WRAPPER	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WRAPPER "")$/;"	v
+CMAKE_C_COMPILE_FEATURES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILE_FEATURES "c_std_90;c_function_prototypes;c_std_99;c_restrict;c_variadic_macr/;"	v
+CMAKE_C_IGNORE_EXTENSIONS	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
+CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/8.3.0\/include;\//;"	v
+CMAKE_C_IMPLICIT_LINK_DIRECTORIES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/8.3.0;\/usr\/lib;\//;"	v
+CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
+CMAKE_C_IMPLICIT_LINK_LIBRARIES	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")$/;"	v
+CMAKE_C_LIBRARY_ARCHITECTURE	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_LIBRARY_ARCHITECTURE "")$/;"	v
+CMAKE_C_LINKER_PREFERENCE	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PREFERENCE 10)$/;"	v
+CMAKE_C_PLATFORM_ID	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_PLATFORM_ID "Linux")$/;"	v
+CMAKE_C_SIMULATE_ID	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_ID "")$/;"	v
+CMAKE_C_SIMULATE_VERSION	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_VERSION "")$/;"	v
+CMAKE_C_SIZEOF_DATA_PTR	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_SIZEOF_DATA_PTR "8")$/;"	v
+CMAKE_C_SOURCE_FILE_EXTENSIONS	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)$/;"	v
+CMAKE_C_STANDARD_COMPUTED_DEFAULT	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "11")$/;"	v
+CMAKE_HOST_SYSTEM	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM "Linux-5.0.9-2-MANJARO")$/;"	v
+CMAKE_HOST_SYSTEM_NAME	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_NAME "Linux")$/;"	v
+CMAKE_HOST_SYSTEM_PROCESSOR	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")$/;"	v
+CMAKE_HOST_SYSTEM_VERSION	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_VERSION "5.0.9-2-MANJARO")$/;"	v
+CMAKE_INTERNAL_PLATFORM_ABI	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_C_COMPILER_ABI}")$/;"	v
+CMAKE_INTERNAL_PLATFORM_ABI	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_CXX_COMPILER_ABI}")$/;"	v
+CMAKE_LIBRARY_ARCHITECTURE	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
+CMAKE_LIBRARY_ARCHITECTURE	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
+CMAKE_LINKER	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_LINKER "\/usr\/bin\/ld")$/;"	v
+CMAKE_LINKER	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER "\/usr\/bin\/ld")$/;"	v
+CMAKE_MT	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
+CMAKE_MT	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
+CMAKE_RANLIB	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^set(CMAKE_RANLIB "\/usr\/bin\/ranlib")$/;"	v
+CMAKE_RANLIB	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^set(CMAKE_RANLIB "\/usr\/bin\/ranlib")$/;"	v
+CMAKE_SIZEOF_VOID_P	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")$/;"	v
+CMAKE_SIZEOF_VOID_P	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_CXX_SIZEOF_DATA_PTR}")$/;"	v
+CMAKE_SYSTEM	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_SYSTEM "Linux-5.0.9-2-MANJARO")$/;"	v
+CMAKE_SYSTEM_LOADED	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_LOADED 1)$/;"	v
+CMAKE_SYSTEM_NAME	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_NAME "Linux")$/;"	v
+CMAKE_SYSTEM_PROCESSOR	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_PROCESSOR "x86_64")$/;"	v
+CMAKE_SYSTEM_VERSION	build/CMakeFiles/3.14.3/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_VERSION "5.0.9-2-MANJARO")$/;"	v
+COLS	board.h	/^    static const int COLS = 15; \/\/列数$/;"	m	class:Board	typeref:typename:const int
+COMPILER_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+CXX_STD	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD /;"	d	file:
+CYGWIN	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(CYGWIN 1)$/;"	v
+CYGWIN	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(CYGWIN 1)$/;"	v
+C_DIALECT	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define C_DIALECT /;"	d	file:
+C_DIALECT	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define C_DIALECT$/;"	d	file:
+C_DIALECT	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define C_DIALECT /;"	d	file:
+DEC	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
+DEC	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
+FADE_IN	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
+FADE_OUT	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
+FALLING	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+GAME_OFFSET	playState.h	/^    static const int GAME_OFFSET = 20;$/;"	m	class:PlayState	typeref:typename:const int
+GameEngine	gameEngine.cpp	/^GameEngine::GameEngine(){$/;"	f	class:GameEngine
+GameEngine	gameEngine.h	/^class GameEngine{$/;"	c
+GameState	gameState.h	/^    GameState(){}$/;"	f	class:GameState
+GameState	gameState.h	/^class GameState{$/;"	c
+HEI_PER_BLOCK	board.h	/^    static const int HEI_PER_BLOCK = WINDOW_HEIGHT \/ COLS; \/\/单行高度$/;"	m	class:Board	typeref:typename:const int
+HEX	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
+HEX	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
+ID_VOID_MAIN	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
+INACTIVE	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+IRRKLANGCALLCONV	irrKlang.h	/^#define IRRKLANGCALLCONV /;"	d
+IRRKLANGCALLCONV	irrKlang.h	/^#define IRRKLANGCALLCONV$/;"	d
+IRRKLANG_API	irrKlang.h	/^        #define IRRKLANG_API /;"	d
+IRRKLANG_API	irrKlang.h	/^    #define IRRKLANG_API$/;"	d
+IRR_KLANG_VERSION	irrKlang.h	/^#define IRR_KLANG_VERSION /;"	d
+Instance	introstate.h	/^    static IntroState* Instance(){return &m_introstate;}$/;"	f	class:IntroState	typeref:typename:IntroState *
+Instance	menustate.h	/^    static MenuState* Instance() {return &m_menustate;}$/;"	f	class:MenuState	typeref:typename:MenuState *
+Instance	playState.h	/^    static PlayState* Instance(){ return &m_playstate; }$/;"	f	class:PlayState	typeref:typename:PlayState *
+IntroState	introstate.h	/^    IntroState(){}$/;"	f	class:IntroState
+IntroState	introstate.h	/^class IntroState: public GameState{$/;"	c
+LANDED	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+LEFT	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+MINGW	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(MINGW 1)$/;"	v
+MINGW	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(MINGW 1)$/;"	v
+MenuState	menustate.h	/^    MenuState(){}$/;"	f	class:MenuState
+MenuState	menustate.h	/^class MenuState: public GameState{$/;"	c
+Movement	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	g	class:Tetris
+NONE	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
+PlayState	playState.h	/^    PlayState(){}$/;"	f	class:PlayState
+PlayState	playState.h	/^class PlayState : public GameState{$/;"	c
+REMAIN	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
+RIGHT	tetris.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+ROWS	board.h	/^    static const int ROWS = 30; \/\/行数$/;"	m	class:Board	typeref:typename:const int
+SIMULATE_ID	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIZE	tetris.h	/^    static const int SIZE = 4; \/\/方块边界$/;"	m	class:Tetris	typeref:typename:const int
+STRINGIFY	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY_HELPER(/;"	d	file:
+Status	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	g	class:IntroState
+Status	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	g	class:Tetris
+Tetris	tetris.cpp	/^Tetris::Tetris(int n_type){$/;"	f	class:Tetris
+Tetris	tetris.h	/^class Tetris{$/;"	c
+UNIX	build/CMakeFiles/3.14.3/CMakeCCompiler.cmake	/^  set(UNIX 1)$/;"	v
+UNIX	build/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake	/^  set(UNIX 1)$/;"	v
+WAITING	tetris.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+WINDOW_HEIGHT	board.h	/^    static const int WINDOW_HEIGHT = 600;\/\/高度$/;"	m	class:Board	typeref:typename:const int
+WINDOW_WIDTH	board.h	/^    static const int WINDOW_WIDTH = 300;\/\/宽度$/;"	m	class:Board	typeref:typename:const int
+WTH_PER_BLOCK	board.h	/^    static const int WTH_PER_BLOCK = WINDOW_WIDTH \/ ROWS;  \/\/单列高度$/;"	m	class:Board	typeref:typename:const int
+_BOARD_H	board.h	/^#define _BOARD_H$/;"	d
+_GAMEENGINE_H	gameEngine.h	/^#define _GAMEENGINE_H$/;"	d
+_GAMESTATE_H	gameState.h	/^#define _GAMESTATE_H$/;"	d
+_INTORSTATE_H	introstate.h	/^#define _INTORSTATE_H$/;"	d
+_MENUSTATE_H	menustate.h	/^#define _MENUSTATE_H$/;"	d
+_PLAYSTATE_H	playState.h	/^#define _PLAYSTATE_H$/;"	d
+_REUSE_H	reuse.h	/^#define _REUSE_H$/;"	d
+_TETRIS_H	tetris.h	/^#define _TETRIS_H$/;"	d
+__IRR_KLANG_H_INCLUDED__	irrKlang.h	/^#define __IRR_KLANG_H_INCLUDED__$/;"	d
+__anon512d486d0110	playState.cpp	/^namespace{$/;"	n	file:
+acceleration	playState.h	/^    float   acceleration;$/;"	m	class:PlayState	typeref:typename:float
+add	board.cpp	/^bool Board::add(Tetris* block){$/;"	f	class:Board	typeref:typename:bool
+add_score	board.h	/^    void add_score(int add){score += add;}$/;"	f	class:Board	typeref:typename:void
+add_to_x	tetris.h	/^    void add_to_x(int x_offset){x += x_offset;}$/;"	f	class:Tetris	typeref:typename:void
+alpha	introstate.h	/^    int alpha;$/;"	m	class:IntroState	typeref:typename:int
+block_table	tetris.cpp	/^const int Tetris::block_table[7][4][2] = {$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_table	tetris.h	/^    static const int block_table[7][4][2];$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_texture	playState.h	/^    SDL_Texture* block_texture;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+board	playState.h	/^    Board* board;$/;"	m	class:PlayState	typeref:typename:Board *
+change_state	gameEngine.cpp	/^void GameEngine::change_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
+changestate	gameState.h	/^    void changestate(GameEngine* game, GameState* state){$/;"	f	class:GameState	typeref:typename:void
+cleanPerRows	board.cpp	/^void Board::cleanPerRows(int i){$/;"	f	class:Board	typeref:typename:void
+cleanUp	introstate.cpp	/^void IntroState::cleanUp(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+cleanUp	menustate.cpp	/^void MenuState::cleanUp(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+cleanUp	playState.cpp	/^void PlayState::cleanUp(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+clean_up	gameEngine.cpp	/^void GameEngine::clean_up(){$/;"	f	class:GameEngine	typeref:typename:void
+color	board.h	/^    int color[ROWS][COLS];     \/\/二维数组表示方块坐标$/;"	m	class:Board	typeref:typename:int[][]
+const	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
+createButton	playState.cpp	/^void PlayState::createButton(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
+currently_selected	menustate.h	/^    int currently_selected;$/;"	m	class:MenuState	typeref:typename:int
+drawBlock	playState.cpp	/^void PlayState::drawBlock(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
+drop	tetris.h	/^    void drop()  {status = FALLING;}$/;"	f	class:Tetris	typeref:typename:void
+execute	gameEngine.cpp	/^void GameEngine::execute(){$/;"	f	class:GameEngine	typeref:typename:void
+exit	gameEngine.h	/^    bool exit;$/;"	m	class:GameEngine	typeref:typename:bool
+exit	introstate.h	/^    bool exit;$/;"	m	class:IntroState	typeref:typename:bool
+exit	menustate.h	/^    bool exit;$/;"	m	class:MenuState	typeref:typename:bool
+exit	playState.h	/^    bool    exit;          \/\/当退出游戏是返回quit$/;"	m	class:PlayState	typeref:typename:bool
+fall	tetris.h	/^    bool fall;      \/\/是否快速下落$/;"	m	class:Tetris	typeref:typename:bool
+features	build/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v	typeref:typename:const char[]
+features	build/CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v	typeref:typename:const char[]
+font_game_over	playState.h	/^    TTF_Font*   font_game_over;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_image_game_over	playState.h	/^    SDL_Texture* font_image_game_over;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_new_game	playState.h	/^    SDL_Texture* font_image_new_game;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_pause	playState.h	/^    SDL_Texture* font_image_pause;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_play	menustate.h	/^    SDL_Texture*        font_image_play;$/;"	m	class:MenuState	typeref:typename:SDL_Texture *
+font_image_quit	menustate.h	/^    SDL_Texture*        font_image_quit;$/;"	m	class:MenuState	typeref:typename:SDL_Texture *
+font_image_quit	playState.h	/^    SDL_Texture* font_image_quit;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_score	playState.h	/^    SDL_Texture* font_image_score;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_score_text	playState.h	/^    SDL_Texture* font_image_score_text;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_tetris	playState.h	/^    SDL_Texture* font_image_tetris;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_title	menustate.h	/^    SDL_Texture*        font_image_title;$/;"	m	class:MenuState	typeref:typename:SDL_Texture *
+font_new_game	playState.h	/^    TTF_Font*   font_new_game;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_pause	playState.h	/^    TTF_Font*   font_pause;     \/\/暂停时显示$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_play	menustate.h	/^    TTF_Font*           font_play;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
+font_quit	menustate.h	/^    TTF_Font*           font_quit;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
+font_quit	playState.h	/^    TTF_Font*   font_quit;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_score	playState.h	/^    TTF_Font*   font_score;     \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_score_text	playState.h	/^    TTF_Font*   font_score_text;\/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_tetris	playState.h	/^    TTF_Font*   font_tetris;    \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_title	menustate.h	/^    TTF_Font*           font_title;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
+frame_rate	playState.cpp	/^float PlayState::frame_rate(GameEngine* game, int* last_time, int* this_time){$/;"	f	class:PlayState	typeref:typename:float
+game_over	playState.h	/^    bool    game_over;     \/\/当游戏结束时返回true$/;"	m	class:PlayState	typeref:typename:bool
+getScore	board.h	/^    int getScore(){return score;}               \/\/获取分数$/;"	f	class:Board	typeref:typename:int
+getShadow	tetris.cpp	/^void Tetris::getShadow(Board *board, int shadow_y[]){$/;"	f	class:Tetris	typeref:typename:void
+getX	tetris.h	/^    int getX(int i){return x + relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:int
+getY	tetris.h	/^    int getY(int i){return x + relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:int
+has_landed	tetris.h	/^    bool has_landed(){return status == LANDED;}$/;"	f	class:Tetris	typeref:typename:bool
+height	gameEngine.h	/^    int height;$/;"	m	class:GameEngine	typeref:typename:int
+info_arch	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
+info_arch	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
+info_compiler	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
+info_compiler	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
+info_cray	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
+info_cray	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
+info_language_dialect_default	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_dialect_default =$/;"	v	typeref:typename:const char *
+info_language_dialect_default	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v	typeref:typename:const char *
+info_platform	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
+info_platform	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate_version	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
+info_simulate_version	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
+info_version	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
+info_version	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
+info_version_internal	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
+info_version_internal	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
+init	introstate.cpp	/^void IntroState::init(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+init	menustate.cpp	/^void MenuState::init(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+init	playState.cpp	/^void PlayState::init(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+input	gameEngine.cpp	/^void GameEngine::input(){$/;"	f	class:GameEngine	typeref:typename:void
+input	introstate.cpp	/^void IntroState::input(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+input	menustate.cpp	/^void MenuState::input(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+input	playState.cpp	/^void PlayState::input(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+irrklang	irrKlang.h	/^namespace irrklang$/;"	n
+items	menustate.h	/^    int items;$/;"	m	class:MenuState	typeref:typename:int
+judgeFull	board.cpp	/^bool Board::judgeFull(int row){$/;"	f	class:Board	typeref:typename:bool
+lands	tetris.h	/^    void lands() {status = LANDED;}$/;"	f	class:Tetris	typeref:typename:void
+last_time	playState.h	/^    int     last_time;$/;"	m	class:PlayState	typeref:typename:int
+letItGo	board.cpp	/^void Board::letItGo(){$/;"	f	class:Board	typeref:typename:void
+loadTexture	reuse.cpp	/^SDL_Texture* loadTexture(const std::string &file,$/;"	f	typeref:typename:SDL_Texture *
+logo	introstate.h	/^    SDL_Texture* logo;$/;"	m	class:IntroState	typeref:typename:SDL_Texture *
+logo_status	introstate.h	/^    Status logo_status;$/;"	m	class:IntroState	typeref:typename:Status
+m_introstate	introstate.cpp	/^IntroState IntroState::m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
+m_introstate	introstate.h	/^    static IntroState m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
+m_menustate	menustate.cpp	/^MenuState MenuState::m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
+m_menustate	menustate.h	/^    static MenuState m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
+m_playstate	playState.cpp	/^PlayState PlayState::m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+m_playstate	playState.h	/^    static PlayState m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+main	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
+main	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
+main	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	build/CMakeFiles/feature_tests.c	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f	typeref:typename:int
+main	build/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f	typeref:typename:int
+main	main.cpp	/^int  main(int argc, char* argv[]){$/;"	f	typeref:typename:int
+movement	tetris.h	/^    Movement movement;$/;"	m	class:Tetris	typeref:typename:Movement
+newgamedown	playState.h	/^    bool    newgamedown;   \/\/按下开始键$/;"	m	class:PlayState	typeref:typename:bool
+newgameup	playState.h	/^    bool    newgameup;     \/\/松开开始键$/;"	m	class:PlayState	typeref:typename:bool
+newgamex1	playState.h	/^    int     newgamex1;$/;"	m	class:PlayState	typeref:typename:int
+newgamex2	playState.h	/^    int     newgamex2;$/;"	m	class:PlayState	typeref:typename:int
+newgamey1	playState.h	/^    int     newgamey1;$/;"	m	class:PlayState	typeref:typename:int
+newgamey2	playState.h	/^    int     newgamey2;$/;"	m	class:PlayState	typeref:typename:int
+next_tetris	playState.h	/^    Tetris* next_tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
+pause	introstate.cpp	/^void IntroState::pause(){}$/;"	f	class:IntroState	typeref:typename:void
+pause	menustate.cpp	/^void MenuState::pause(){}$/;"	f	class:MenuState	typeref:typename:void
+pause	playState.cpp	/^void PlayState::pause(){$/;"	f	class:PlayState	typeref:typename:void
+paused	playState.h	/^    bool    paused;$/;"	m	class:PlayState	typeref:typename:bool
+play	menustate.h	/^    bool play;$/;"	m	class:MenuState	typeref:typename:bool
+play_height	menustate.h	/^    int play_width, play_height;$/;"	m	class:MenuState	typeref:typename:int
+play_width	menustate.h	/^    int play_width, play_height;$/;"	m	class:MenuState	typeref:typename:int
+pop_state	gameEngine.cpp	/^void GameEngine::pop_state(){$/;"	f	class:GameEngine	typeref:typename:void
+push_state	gameEngine.cpp	/^void GameEngine::push_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
+qnxnto	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
+qnxnto	build/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
+quit	gameEngine.h	/^    void quit(){exit = true;}$/;"	f	class:GameEngine	typeref:typename:void
+quit_height	menustate.h	/^    int quit_width, quit_height;$/;"	m	class:MenuState	typeref:typename:int
+quit_width	menustate.h	/^    int quit_width, quit_height;$/;"	m	class:MenuState	typeref:typename:int
+quitdown	playState.h	/^    bool    quitdown;      \/\/按下退出键$/;"	m	class:PlayState	typeref:typename:bool
+quitup	playState.h	/^    bool    quitup;        \/\/松开退出键$/;"	m	class:PlayState	typeref:typename:bool
+rd	playState.cpp	/^    std::random_device rd;$/;"	v	namespace:__anon512d486d0110	typeref:typename:std::random_device
+relatLocate	tetris.h	/^    int (*relatLocate)[2];  \/\/相对中心方块坐标$/;"	m	class:Tetris	typeref:typename:int (*)[2]
+releaseBlocks	playState.cpp	/^void PlayState::releaseBlocks(){$/;"	f	class:PlayState	typeref:typename:void
+render	gameEngine.cpp	/^void GameEngine::render(){$/;"	f	class:GameEngine	typeref:typename:void
+render	introstate.cpp	/^void IntroState::render(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+render	menustate.cpp	/^void MenuState::render(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+render	playState.cpp	/^void PlayState::render(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+renderText	reuse.cpp	/^SDL_Texture* renderText(const std::string &message,$/;"	f	typeref:typename:SDL_Texture *
+renderTexture	reuse.cpp	/^void renderTexture(SDL_Texture* tex,$/;"	f	typeref:typename:void
+render_logo	introstate.cpp	/^void IntroState::render_logo(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+render_score	board.h	/^    bool render_score;$/;"	m	class:Board	typeref:typename:bool
+renderer	gameEngine.h	/^    SDL_Renderer * renderer;$/;"	m	class:GameEngine	typeref:typename:SDL_Renderer *
+reset	introstate.cpp	/^void IntroState::reset(){}$/;"	f	class:IntroState	typeref:typename:void
+reset	menustate.cpp	/^void MenuState::reset(){}$/;"	f	class:MenuState	typeref:typename:void
+reset	playState.cpp	/^void PlayState::reset(){$/;"	f	class:PlayState	typeref:typename:void
+resume	introstate.cpp	/^void IntroState::resume(){}$/;"	f	class:IntroState	typeref:typename:void
+resume	menustate.cpp	/^void MenuState::resume(){}$/;"	f	class:MenuState	typeref:typename:void
+resume	playState.cpp	/^void PlayState::resume(){$/;"	f	class:PlayState	typeref:typename:void
+rotate	tetris.h	/^    bool rotate;    \/\/是否旋转$/;"	m	class:Tetris	typeref:typename:bool
+rotateLeft	tetris.cpp	/^void Tetris::rotateLeft(){$/;"	f	class:Tetris	typeref:typename:void
+rotateRight	tetris.cpp	/^void Tetris::rotateRight(){$/;"	f	class:Tetris	typeref:typename:void
+runnning	gameEngine.h	/^    bool runnning(){return !exit;}$/;"	f	class:GameEngine	typeref:typename:bool
+score	board.h	/^    int score;$/;"	m	class:Board	typeref:typename:int
+select_down	menustate.cpp	/^void MenuState::select_down(){$/;"	f	class:MenuState	typeref:typename:void
+select_up	menustate.cpp	/^void MenuState::select_up(){$/;"	f	class:MenuState	typeref:typename:void
+setPoint	tetris.h	/^    void setPoint(int xx, int yy){x = xx; y = yy;}$/;"	f	class:Tetris	typeref:typename:void
+setX	tetris.h	/^    void setX(int i, int new_x){x = new_x - relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:void
+setY	tetris.h	/^    void setY(int i, int new_y){y = new_y - relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:void
+shift	tetris.h	/^    bool shift;     \/\/左转(true)&&k,右转(false)$/;"	m	class:Tetris	typeref:typename:bool
+speedup	tetris.h	/^    bool speedup;   \/\/是否加速$/;"	m	class:Tetris	typeref:typename:bool
+states	gameEngine.h	/^    std::vector<GameState*> states;$/;"	m	class:GameEngine	typeref:typename:std::vector<GameState * >
+status	tetris.h	/^    Status status;$/;"	m	class:Tetris	typeref:typename:Status
+tetris	playState.h	/^    Tetris* tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
+this_time	playState.h	/^    int     this_time;$/;"	m	class:PlayState	typeref:typename:int
+time_counter	playState.h	/^    float   time_counter;$/;"	m	class:PlayState	typeref:typename:float
+time_till_drop	playState.h	/^    float   time_till_drop;$/;"	m	class:PlayState	typeref:typename:float
+title_height	menustate.h	/^    int title_width, title_height;$/;"	m	class:MenuState	typeref:typename:int
+title_width	menustate.h	/^    int title_width, title_height;$/;"	m	class:MenuState	typeref:typename:int
+type	tetris.h	/^    int type;               \/\/方块种类(0-6)$/;"	m	class:Tetris	typeref:typename:int
+update	gameEngine.cpp	/^void GameEngine::update(){$/;"	f	class:GameEngine	typeref:typename:void
+update	introstate.cpp	/^void IntroState::update(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+update	menustate.cpp	/^void MenuState::update(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+update	playState.cpp	/^void PlayState::update(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+volatile	build/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
+white	menustate.h	/^    SDL_Color           white;$/;"	m	class:MenuState	typeref:typename:SDL_Color
+white	playState.h	/^    SDL_Color   white;$/;"	m	class:PlayState	typeref:typename:SDL_Color
+width	gameEngine.h	/^    int width;$/;"	m	class:GameEngine	typeref:typename:int
+window	gameEngine.h	/^    SDL_Window * window;$/;"	m	class:GameEngine	typeref:typename:SDL_Window *
+x	tetris.h	/^    int x, y;               \/\/方块型相对位置中(0,0)的全局坐标$/;"	m	class:Tetris	typeref:typename:int
+y	tetris.h	/^    int x, y;               \/\/方块型相对位置中(0,0)的全局坐标$/;"	m	class:Tetris	typeref:typename:int

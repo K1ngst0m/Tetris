@@ -1,0 +1,75 @@
+src/board.o: src/board.cc src/board.h src/tetris.h
+src/reuse.o: src/reuse.cc src/reuse.h
+src/tetris.o: src/tetris.cc src/tetris.h src/board.h
+src/main.o: src/main.cc src/gameEngine.h src/introstate.h src/gameState.h
+src/introstate.o: src/introstate.cc src/introstate.h src/gameState.h \
+ src/gameEngine.h src/menustate.h src/reuse.h
+src/gameEngine.o: src/gameEngine.cc src/gameEngine.h src/gameState.h
+src/playState.o: src/playState.cc src/playState.h src/irrKlang.h \
+ irrKlang-64bit-1.5.0/include/ik_irrKlangTypes.h \
+ irrKlang-64bit-1.5.0/include/ik_vec3d.h \
+ irrKlang-64bit-1.5.0/include/ik_irrKlangTypes.h \
+ irrKlang-64bit-1.5.0/include/ik_IRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_IVirtualRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_ESoundOutputDrivers.h \
+ irrKlang-64bit-1.5.0/include/ik_ESoundEngineOptions.h \
+ irrKlang-64bit-1.5.0/include/ik_EStreamModes.h \
+ irrKlang-64bit-1.5.0/include/ik_SAudioStreamFormat.h \
+ irrKlang-64bit-1.5.0/include/ik_IRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundEngine.h \
+ irrKlang-64bit-1.5.0/include/ik_vec3d.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundSource.h \
+ irrKlang-64bit-1.5.0/include/ik_IVirtualRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_EStreamModes.h \
+ irrKlang-64bit-1.5.0/include/ik_SAudioStreamFormat.h \
+ irrKlang-64bit-1.5.0/include/ik_ISound.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundEffectControl.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileFactory.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundMixedOutputReceiver.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundSource.h \
+ irrKlang-64bit-1.5.0/include/ik_ISound.h \
+ irrKlang-64bit-1.5.0/include/ik_IAudioStream.h \
+ irrKlang-64bit-1.5.0/include/ik_IAudioStreamLoader.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileReader.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundEffectControl.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundStopEventReceiver.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileFactory.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileReader.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundDeviceList.h \
+ irrKlang-64bit-1.5.0/include/ik_IAudioRecorder.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundMixedOutputReceiver.h \
+ src/gameState.h src/gameEngine.h src/reuse.h src/board.h src/tetris.h
+src/menustate.o: src/menustate.cc src/menustate.h src/gameState.h \
+ src/gameEngine.h src/playState.h src/irrKlang.h \
+ irrKlang-64bit-1.5.0/include/ik_irrKlangTypes.h \
+ irrKlang-64bit-1.5.0/include/ik_vec3d.h \
+ irrKlang-64bit-1.5.0/include/ik_irrKlangTypes.h \
+ irrKlang-64bit-1.5.0/include/ik_IRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_IVirtualRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_ESoundOutputDrivers.h \
+ irrKlang-64bit-1.5.0/include/ik_ESoundEngineOptions.h \
+ irrKlang-64bit-1.5.0/include/ik_EStreamModes.h \
+ irrKlang-64bit-1.5.0/include/ik_SAudioStreamFormat.h \
+ irrKlang-64bit-1.5.0/include/ik_IRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundEngine.h \
+ irrKlang-64bit-1.5.0/include/ik_vec3d.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundSource.h \
+ irrKlang-64bit-1.5.0/include/ik_IVirtualRefCounted.h \
+ irrKlang-64bit-1.5.0/include/ik_EStreamModes.h \
+ irrKlang-64bit-1.5.0/include/ik_SAudioStreamFormat.h \
+ irrKlang-64bit-1.5.0/include/ik_ISound.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundEffectControl.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileFactory.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundMixedOutputReceiver.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundSource.h \
+ irrKlang-64bit-1.5.0/include/ik_ISound.h \
+ irrKlang-64bit-1.5.0/include/ik_IAudioStream.h \
+ irrKlang-64bit-1.5.0/include/ik_IAudioStreamLoader.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileReader.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundEffectControl.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundStopEventReceiver.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileFactory.h \
+ irrKlang-64bit-1.5.0/include/ik_IFileReader.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundDeviceList.h \
+ irrKlang-64bit-1.5.0/include/ik_IAudioRecorder.h \
+ irrKlang-64bit-1.5.0/include/ik_ISoundMixedOutputReceiver.h src/reuse.h

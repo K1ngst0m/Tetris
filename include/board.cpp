@@ -1,3 +1,4 @@
+
 #include"board.h"
 #include"tetromino.h"
 
@@ -20,19 +21,24 @@ void Board::cleanPerRows(int i){
     for(int row = i; row > 0; row--)
         for(int col = 0; col < COLS; col++)
             color[row][col] = color[row-1][col];
-       //color[row][j] = color[row+1][j];
-    //for(int col = 0; col < COLS; col++)
-        //color[ROWS-1][col] = -1;
 }
 
 void Board::letItGo(){
+    int bouns_counter = 0;
     for(int row = ROWS-1; row >= 0; row--){
         if(!judgeFull(row))
             continue;
 
         cleanPerRows(row);
         row++;
+
+        add_score(1);
+        bouns_counter++;
+        render_score = true;
     }
+
+    if(bouns_counter == 4)
+        add_score(BONUS);
 }
 
 bool Board::add(Tetris* block){

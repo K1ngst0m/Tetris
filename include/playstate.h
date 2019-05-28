@@ -1,11 +1,9 @@
-#ifndef SRC_PLAYSTATE_H
-#define SRC_PLAYSTATE_H
+#ifndef SRC_PLAYSTATE_H_
+#define SRC_PLAYSTATE_H_
 
-#include"irrKlang.h"
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 #include<SDL2/SDL_image.h>
-#include<random>
 
 #include"gamestate.h"
 
@@ -19,9 +17,9 @@ public:
     static const int GAME_OFFSET = 20;
 
     void init(GameEngine* game);        //系统初始化
-    void cleanUp(GameEngine *game);     //清理内存
+    void clean_up(GameEngine *game);     //清理内存
 
-    void reset();                       //重置游戏
+    void reset();
     void resume();
     void pause();
 

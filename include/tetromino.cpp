@@ -13,6 +13,10 @@ const int Tetris::block_table[7][4][2] = {
 
 Tetris::Tetris(int n_type){
     type = n_type;
+
+    fall = false;
+    speedup = false;
+
     status = INACTIVE;
     movement = NONE;
     relatLocate = new int[4][2];
@@ -42,14 +46,14 @@ void Tetris::getShadow(Board *board, int shadow_y[]){
     int t_y = y;
     Status t_s = status;
 
-    while(!(status == LANDED)){
+    while(!has_landed()){
         for(int i = 0; i < SIZE; i++)
             if(getY(i) == board->ROWS || board->color[getY(i)][getX(i)] != -1){
-                status = LANDED;
+                lands();
                 y--;
                 break;
             }
-        if(!(status == LANDED))
+        if(!has_landed())
             y++;
     }
 

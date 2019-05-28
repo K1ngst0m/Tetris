@@ -1,5 +1,5 @@
-#ifndef SRC_TETRIS_H
-#define SRC_TETRIS_H
+#ifndef SRC_TETRIS_H_
+#define SRC_TETRIS_H_
 
 class Board;
 
@@ -25,7 +25,7 @@ public:
     void setY(int i, int new_y){y = new_y - relatLocate[i][1];}
     //获取坐标//
     int getX(int i){return x + relatLocate[i][0];}
-    int getY(int i){return x + relatLocate[i][1];}
+    int getY(int i){return y + relatLocate[i][1];}
 
     void add_to_x(int x_offset){x += x_offset;}
 

@@ -9,7 +9,7 @@
 class IntroState: public GameState{
 public:
     void init(GameEngine* game);
-    void cleanUp(GameEngine* game);
+    void clean_up(GameEngine* game);
 
     void pause();
     void resume();
@@ -19,7 +19,7 @@ public:
     void update(GameEngine* game);
     void render(GameEngine* game);
 
-    static IntroState* Instance(){return &m_introstate;}
+    static IntroState* Instance(){ return &m_introstate; }
 
     void render_logo(GameEngine* game);
 

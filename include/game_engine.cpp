@@ -1,6 +1,5 @@
 
 #include"game_engine.h"
-#include<iostream>
 #include"gamestate.h"
 
 GameEngine::GameEngine(){
@@ -42,7 +41,7 @@ void GameEngine::execute(){
 
 void GameEngine::clean_up(){
     while(!states.empty()){
-        states.back()->cleanUp(this);
+        states.back()->clean_up(this);
         states.pop_back();
     }
 
@@ -51,7 +50,7 @@ void GameEngine::clean_up(){
 
 void GameEngine::change_state(GameState* state){
     if(!states.empty()){
-        states.back()->cleanUp(this);
+        states.back()->clean_up(this);
         states.pop_back();
     }
 
@@ -60,6 +59,7 @@ void GameEngine::change_state(GameState* state){
 }
 
 void GameEngine::push_state(GameState* state){
+
     if(!states.empty())
         states.back()->pause();
 
@@ -69,7 +69,7 @@ void GameEngine::push_state(GameState* state){
 
 void GameEngine::pop_state(){
     if(!states.empty()){
-        states.back()->cleanUp(this);
+        states.back()->clean_up(this);
         states.pop_back();
     }
     if(!states.empty())

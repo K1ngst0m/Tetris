@@ -1,15 +1,10 @@
 #include"playstate.h"
-#include<random>
+
+
 #include"game_engine.h"
-#include"utilities.h"
-#include"board.h"
 #include"tetromino.h"
-
-namespace{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-
-}
+#include"board.h"
+#include"utilities.h"
 
 PlayState PlayState::m_playstate;
 
@@ -21,27 +16,27 @@ void PlayState::init(GameEngine* game){
     next_tetris  = new Tetris(rand()%7);
 
     //砖块材质加载
-    block_texture = loadTexture("../resource/img/block.bmp", game->renderer);
+    block_texture = loadTexture("resource/img/block.bmp", game->renderer);
 
     //字体载入
     TTF_Init();
     white = {255, 255, 255};
-    font_tetris     = TTF_OpenFont("../resource/fonts/MonsterFriendFore.otf", 16);
-    font_score_text = TTF_OpenFont("../resource/fonts/DTM-Mono.otf", 20);
-    font_score      = TTF_OpenFont("../resource/fonts/DTM-Sans.otf", 20);
+    font_tetris     = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 16);
+    font_score_text = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    font_score      = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 20);
 
-    font_new_game   = TTF_OpenFont("../resource/fonts/DTM-Mono.otf", 20);
-    font_pause      = TTF_OpenFont("../resource/fonts/DTM-Sans.otf", 16);
-    font_game_over  = TTF_OpenFont("../resource/fonts/DTM-Mono.otf", 20);
-    font_quit       = TTF_OpenFont("../resource/fonts/DTM-Mono.otf", 20);
+    font_new_game   = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    font_pause      = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 16);
+    font_game_over  = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    font_quit       = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
 
-    font_image_new_game = renderText("NEW GAME", white, font_new_game, game->renderer);
-    font_image_pause = renderText("PAUSE", white, font_pause, game->renderer);
-    font_image_quit = renderText("QUIT", white, font_quit, game->renderer);
-    font_image_game_over = renderText("GAME OVER", white, font_game_over, game->renderer);
-    font_image_tetris = renderText("TETRIS", white, font_tetris, game->renderer);
-    font_image_score_text = renderText("SCORE: ", white, font_score_text, game->renderer);
-    font_image_score = renderText(std::to_string(board->getScore()), white, font_score, game->renderer);
+    font_image_new_game     = renderText("NEW GAME" , white, font_new_game  , game->renderer);
+    font_image_pause        = renderText("PAUSE"    , white, font_pause     , game->renderer);
+    font_image_quit         = renderText("QUIT"     , white, font_quit      , game->renderer);
+    font_image_game_over    = renderText("GAME OVER", white, font_game_over , game->renderer);
+    font_image_tetris       = renderText("TETRIS"   , white, font_tetris    , game->renderer);
+    font_image_score_text   = renderText("SCORE: "  , white, font_score_text, game->renderer);
+    font_image_score        = renderText(std::to_string(board->getScore())  , white, font_score, game->renderer);
 
     acceleration    = 0.005f;
     this_time       = 0;
@@ -71,10 +66,11 @@ void PlayState::init(GameEngine* game){
 }
 
 
-void PlayState::cleanUp(GameEngine* game){
+void PlayState::clean_up(GameEngine* game){
+
     TTF_CloseFont(font_tetris);
     TTF_CloseFont(font_score);
-    TTF_CloseFont(font_tetris);
+    TTF_CloseFont(font_score_text);
     TTF_CloseFont(font_new_game);
     TTF_CloseFont(font_pause);
     TTF_CloseFont(font_game_over);
@@ -92,7 +88,6 @@ void PlayState::cleanUp(GameEngine* game){
 
     SDL_DestroyWindow(game->window);
     SDL_DestroyRenderer(game->renderer);
-
     SDL_Quit();
 }
 
@@ -120,7 +115,6 @@ void PlayState::reset(){
     next_tetris = new Tetris(rand()%7);
 
     tetris->setPoint(static_cast<int>(board->COLS/2), 0);
-
     next_tetris->setPoint(board->COLS+5, static_cast<int>(0.3*board->ROWS));
 
     game_over            = false;
@@ -201,7 +195,7 @@ void PlayState::input(GameEngine* game){
             if (x > newgamex1 && x < newgamex2){
                 if(y > newgamey2 && y < newgamey1)
                     //光标置于"NEW GAME" 位置
-                    newgamedown = true;
+                    { newgamedown = true; }
                 else if (y > newgamey2 + 4*board->HEI_PER_BLOCK &&
                          y < newgamey1 + 4*board->HEI_PER_BLOCK){
                     //光标置于"QUIT"位置
@@ -225,14 +219,14 @@ void PlayState::input(GameEngine* game){
 }}
 
 void PlayState::releaseBlocks(){
-    Tetris* new_block = new Tetris(rand()%7);
-    new_block->setPoint(next_tetris->x, next_tetris->y);
+    Tetris* new_tetris = new Tetris(rand()%7);
+    new_tetris->setPoint(next_tetris->x, next_tetris->y);
 
     delete[] tetris;
     tetris = next_tetris;
     tetris->setPoint(static_cast<int>(board->COLS/2), 0);
 
-    next_tetris = new_block;
+    next_tetris = new_tetris;
 
     tetris->drop();
 }
@@ -255,6 +249,7 @@ void PlayState::update(GameEngine* game){
         if(!board->add(tetris)){
             game_over = true;
             return; }
+        releaseBlocks();
     }else if(tetris->fall){
         tetris->y++;//加速
     }else{
@@ -275,6 +270,7 @@ void PlayState::update(GameEngine* game){
             time_counter = 0.0f;
         }
     }
+
     for(int i = 0; i < tetris->SIZE; i++){
         int x = tetris->getX(i);
         int y = tetris->getY(i);
@@ -282,14 +278,15 @@ void PlayState::update(GameEngine* game){
         if(x < 0 || x >= board->COLS){
             if(tetris->rotate)
                 tetris->rotateRight();
+
             if(tetris->shift)
                 tetris->x -= tetris->movement;
-
             break;
+
         }else if(y >= board->ROWS){
             tetris->lands();
 
-            tetris->setX(i, board->ROWS-1);
+            tetris->setY(i, board->ROWS-1);
         }else if(y >= 0){
             if(board->color[y][x] != -1){
                 if(tetris->rotate || tetris->shift){
@@ -320,6 +317,7 @@ void PlayState::render(GameEngine* game){
     //渲染 "TETRIS" 文字
     int x = (next_tetris->x-3) * board->WTH_PER_BLOCK;
     int y = GAME_OFFSET;
+
     renderTexture(font_image_tetris, game->renderer, x, y);
     //渲染 "PAUSE" 文字
     if(paused)
@@ -390,8 +388,8 @@ void PlayState::render(GameEngine* game){
 
     //方块池右边缘
     SDL_RenderDrawLine(game->renderer,
-                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET,
-                       GAME_OFFSET + board->WINDOW_WIDTH, GAME_OFFSET + board->WINDOW_HEIGHT);
+                       GAME_OFFSET, GAME_OFFSET,
+                       GAME_OFFSET, GAME_OFFSET + board->WINDOW_HEIGHT);
     //方块池左边缘
     SDL_RenderDrawLine(game->renderer,
                        GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET,
@@ -399,7 +397,8 @@ void PlayState::render(GameEngine* game){
 
     //方块池顶边缘
     SDL_RenderDrawLine(game->renderer,
-                       GAME_OFFSET, GAME_OFFSET, GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET);
+                       GAME_OFFSET, GAME_OFFSET,
+                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET);
 
     //方块池底边缘
     SDL_RenderDrawLine(game->renderer,

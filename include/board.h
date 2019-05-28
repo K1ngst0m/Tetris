@@ -2,6 +2,7 @@
 #define SRC_BOARD_H_
 
 
+#include"tetromino.h"
 class Board{ //方块池/游戏边界
 public:
     static const int WINDOW_WIDTH = 300;//宽度
@@ -12,7 +13,7 @@ public:
 
     static const int HEI_PER_BLOCK = WINDOW_HEIGHT / ROWS; //单行宽度
     static const int WTH_PER_BLOCK = WINDOW_WIDTH / COLS;  //单列高度
-    //static const int BONUS = 3; //分数相关
+    static const int BONUS = 3; //分数相关
 
     int color[ROWS][COLS];     //二维数组表示方块坐标
     bool render_score;          //刷新分数

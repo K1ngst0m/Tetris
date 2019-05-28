@@ -1,5 +1,5 @@
-#ifndef SRC_REUSE_H
-#define SRC_REUSE_H
+#ifndef SRC_UTILITIES_H_
+#define SRC_UTILITIES_H_
 
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>

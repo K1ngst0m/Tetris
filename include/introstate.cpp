@@ -5,13 +5,13 @@
 IntroState IntroState::m_introstate;
 
 void IntroState::init(GameEngine* game){
-    logo = loadTexture("../resource/img/logo.png", game->renderer);
+    logo = loadTexture("resource/img/logo.png", game->renderer);
     exit = false;
     alpha = 1;
     logo_status = FADE_IN;
 }
 
-void IntroState::cleanUp(GameEngine* game){
+void IntroState::clean_up(GameEngine* game){
     IMG_Quit();
 }
 

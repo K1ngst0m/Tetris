@@ -9,7 +9,7 @@
 class MenuState: public GameState{
 public:
     void init(GameEngine* game);
-    void cleanUp(GameEngine* game);
+    void clean_up(GameEngine* game);
 
     void pause();
     void resume();
@@ -42,9 +42,9 @@ private:
     SDL_Texture*        font_image_quit;
 
     //文字位置
-    int title_width, title_height;
-    int play_width, play_height;
-    int quit_width, quit_height;
+    int title_width , title_height;
+    int play_width  , play_height;
+    int quit_width  , quit_height;
 
     int currently_selected;
 

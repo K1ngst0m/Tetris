@@ -11,27 +11,24 @@ void MenuState::init(GameEngine* game){
     TTF_Init();
     white = {255, 255, 255};
 
-    font_title = TTF_OpenFont("../resource/fonts/MonsterFriendFore.otf", 32);
-    font_play = TTF_OpenFont("../resource/fonts/MonsterFriendFore.otf", 16);
-    font_quit = TTF_OpenFont("../resource/fonts/MonsterFriendFore.otf", 16);
+    font_title  = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 60);
+    font_play   = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
+    font_quit   = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
 
-    font_image_title = renderText("TETRIS", white, font_title, game->renderer);
-    font_image_play = renderText("PLAY", white, font_play, game->renderer);
-    font_image_quit = renderText("QUIT", white, font_quit, game->renderer);
+    font_image_title    = renderText("TETRIS", white, font_title, game->renderer);
+    font_image_play     = renderText("PLAY"  , white, font_play , game->renderer);
+    font_image_quit     = renderText("QUIT"  , white, font_quit , game->renderer);
 
     //文字位置
-    SDL_QueryTexture(font_image_title,
-                     nullptr, nullptr, &title_width, &title_height);
-    SDL_QueryTexture(font_image_play,
-                     nullptr, nullptr, &play_width, &play_height);
-    SDL_QueryTexture(font_image_quit,
-                     nullptr, nullptr, &play_width, &play_height);
+    SDL_QueryTexture(font_image_title, nullptr, nullptr , &title_width, &title_height);
+    SDL_QueryTexture(font_image_play , nullptr, nullptr , &play_width , &play_height);
+    SDL_QueryTexture(font_image_quit , nullptr, nullptr , &quit_width , &quit_height);
 
     currently_selected = 0;
     items = 2;
 }
 
-void MenuState::cleanUp(GameEngine* game){
+void MenuState::clean_up(GameEngine* game){
     //字体清理
     TTF_CloseFont(font_title);
     TTF_CloseFont(font_play);
@@ -61,11 +58,9 @@ void MenuState::input(GameEngine* game){
                 exit = true;
                 break;
             case SDLK_UP:
-                select_up();
-                break;
+                select_up(); break;
             case SDLK_DOWN:
-                select_down();
-                break;
+                select_down(); break;
             case SDLK_RETURN:
                 if(currently_selected == 0)
                     play = true;
@@ -108,7 +103,7 @@ void MenuState::render(GameEngine* game){
     }
 
     renderTexture(font_image_play, game->renderer,
-                  (game->width - play-width) / 2, (game->height - play_height) / 2);
+                  (game->width - play_width) / 2, (game->height - play_height) / 2);
     renderTexture(font_image_quit, game->renderer,
                   (game->width - quit_width) / 2,(game->height - quit_height) / 2+space);
 
@@ -131,6 +126,6 @@ void MenuState::select_up(){
 
 void MenuState::select_down(){
     if(currently_selected < items-1){
-        currently_selected = (currently_selected+1) % items;
+        currently_selected = (currently_selected + 1) % items;
     }
 }

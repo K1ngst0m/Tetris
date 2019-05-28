@@ -1,0 +1,202 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+Board	board.cc	/^Board::Board(){$/;"	f	class:Board
+Board	board.h	/^class Board{ \/\/方块池\/游戏边界$/;"	c
+COLS	board.h	/^    static const int COLS = 15; \/\/列数$/;"	m	class:Board	typeref:typename:const int
+FADE_IN	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
+FADE_OUT	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
+FALLING	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+GAME_OFFSET	playstate.h	/^    static const int GAME_OFFSET = 20;$/;"	m	class:PlayState	typeref:typename:const int
+GameEngine	game_engine.cc	/^GameEngine::GameEngine(){$/;"	f	class:GameEngine
+GameEngine	game_engine.h	/^class GameEngine{$/;"	c
+GameState	gamestate.h	/^    GameState(){}$/;"	f	class:GameState
+GameState	gamestate.h	/^class GameState{$/;"	c
+HEI_PER_BLOCK	board.h	/^    static const int HEI_PER_BLOCK = WINDOW_HEIGHT \/ COLS; \/\/单行高度$/;"	m	class:Board	typeref:typename:const int
+INACTIVE	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+Instance	introstate.h	/^    static IntroState* Instance(){return &m_introstate;}$/;"	f	class:IntroState	typeref:typename:IntroState *
+Instance	menustate.h	/^    static MenuState* Instance() {return &m_menustate;}$/;"	f	class:MenuState	typeref:typename:MenuState *
+Instance	playstate.h	/^    static PlayState* Instance(){ return &m_playstate; }$/;"	f	class:PlayState	typeref:typename:PlayState *
+IntroState	introstate.h	/^    IntroState(){}$/;"	f	class:IntroState
+IntroState	introstate.h	/^class IntroState: public GameState{$/;"	c
+LANDED	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+LEFT	tetromino.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+MenuState	menustate.h	/^    MenuState(){}$/;"	f	class:MenuState
+MenuState	menustate.h	/^class MenuState: public GameState{$/;"	c
+Movement	tetromino.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	g	class:Tetris
+NONE	tetromino.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+PlayState	playstate.h	/^    PlayState(){}$/;"	f	class:PlayState
+PlayState	playstate.h	/^class PlayState : public GameState{$/;"	c
+REMAIN	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
+RIGHT	tetromino.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
+ROWS	board.h	/^    static const int ROWS = 30; \/\/行数$/;"	m	class:Board	typeref:typename:const int
+SIZE	tetromino.h	/^    static const int SIZE = 4; \/\/方块边界$/;"	m	class:Tetris	typeref:typename:const int
+SRC_BOARD_H	board.h	/^#define SRC_BOARD_H$/;"	d
+SRC_GAME_ENGINE_H	game_engine.h	/^#define SRC_GAME_ENGINE_H$/;"	d
+SRC_INTORSTATE_H	introstate.h	/^#define SRC_INTORSTATE_H$/;"	d
+SRC_MENUSTATE_H	menustate.h	/^#define SRC_MENUSTATE_H$/;"	d
+SRC_PLAYSTATE_H	playstate.h	/^#define SRC_PLAYSTATE_H$/;"	d
+SRC_REUSE_H	utilities.h	/^#define SRC_REUSE_H$/;"	d
+SRC_TETRIS_H	tetromino.h	/^#define SRC_TETRIS_H$/;"	d
+Status	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	g	class:IntroState
+Status	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	g	class:Tetris
+Tetris	tetromino.cc	/^Tetris::Tetris(int n_type){$/;"	f	class:Tetris
+Tetris	tetromino.h	/^class Tetris{$/;"	c
+WAITING	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
+WINDOW_HEIGHT	board.h	/^    static const int WINDOW_HEIGHT = 600;\/\/高度$/;"	m	class:Board	typeref:typename:const int
+WINDOW_WIDTH	board.h	/^    static const int WINDOW_WIDTH = 300;\/\/宽度$/;"	m	class:Board	typeref:typename:const int
+WTH_PER_BLOCK	board.h	/^    static const int WTH_PER_BLOCK = WINDOW_WIDTH \/ ROWS;  \/\/单列高度$/;"	m	class:Board	typeref:typename:const int
+_GAMESTATE_H	gamestate.h	/^#define _GAMESTATE_H$/;"	d
+__anon8ab058700110	playstate.cc	/^namespace{$/;"	n	file:
+acceleration	playstate.h	/^    float   acceleration;$/;"	m	class:PlayState	typeref:typename:float
+add	board.cc	/^bool Board::add(Tetris* block){$/;"	f	class:Board	typeref:typename:bool
+add_score	board.h	/^    void add_score(int add){score += add;}$/;"	f	class:Board	typeref:typename:void
+add_to_x	tetromino.h	/^    void add_to_x(int x_offset){x += x_offset;}$/;"	f	class:Tetris	typeref:typename:void
+alpha	introstate.h	/^    int alpha;$/;"	m	class:IntroState	typeref:typename:int
+block_table	tetromino.cc	/^const int Tetris::block_table[7][4][2] = {$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_table	tetromino.h	/^    static const int block_table[7][4][2];$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_texture	playstate.h	/^    SDL_Texture* block_texture;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+board	playstate.h	/^    Board* board;$/;"	m	class:PlayState	typeref:typename:Board *
+change_state	game_engine.cc	/^void GameEngine::change_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
+changestate	gamestate.h	/^    void changestate(GameEngine* game, GameState* state){$/;"	f	class:GameState	typeref:typename:void
+cleanPerRows	board.cc	/^void Board::cleanPerRows(int i){$/;"	f	class:Board	typeref:typename:void
+cleanUp	introstate.cc	/^void IntroState::cleanUp(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+cleanUp	menustate.cc	/^void MenuState::cleanUp(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+cleanUp	playstate.cc	/^void PlayState::cleanUp(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+clean_up	game_engine.cc	/^void GameEngine::clean_up(){$/;"	f	class:GameEngine	typeref:typename:void
+color	board.h	/^    int color[ROWS][COLS];     \/\/二维数组表示方块坐标$/;"	m	class:Board	typeref:typename:int[][]
+createButton	playstate.cc	/^void PlayState::createButton(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
+currently_selected	menustate.h	/^    int currently_selected;$/;"	m	class:MenuState	typeref:typename:int
+drawBlock	playstate.cc	/^void PlayState::drawBlock(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
+drop	tetromino.h	/^    void drop()  {status = FALLING;}$/;"	f	class:Tetris	typeref:typename:void
+execute	game_engine.cc	/^void GameEngine::execute(){$/;"	f	class:GameEngine	typeref:typename:void
+exit	game_engine.h	/^    bool exit;$/;"	m	class:GameEngine	typeref:typename:bool
+exit	introstate.h	/^    bool exit;$/;"	m	class:IntroState	typeref:typename:bool
+exit	menustate.h	/^    bool exit;$/;"	m	class:MenuState	typeref:typename:bool
+exit	playstate.h	/^    bool    exit;          \/\/当退出游戏是返回quit$/;"	m	class:PlayState	typeref:typename:bool
+fall	tetromino.h	/^    bool fall;      \/\/是否快速下落$/;"	m	class:Tetris	typeref:typename:bool
+font_game_over	playstate.h	/^    TTF_Font*   font_game_over;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_image_game_over	playstate.h	/^    SDL_Texture* font_image_game_over;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_new_game	playstate.h	/^    SDL_Texture* font_image_new_game;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_pause	playstate.h	/^    SDL_Texture* font_image_pause;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_play	menustate.h	/^    SDL_Texture*        font_image_play;$/;"	m	class:MenuState	typeref:typename:SDL_Texture *
+font_image_quit	menustate.h	/^    SDL_Texture*        font_image_quit;$/;"	m	class:MenuState	typeref:typename:SDL_Texture *
+font_image_quit	playstate.h	/^    SDL_Texture* font_image_quit;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_score	playstate.h	/^    SDL_Texture* font_image_score;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_score_text	playstate.h	/^    SDL_Texture* font_image_score_text;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_tetris	playstate.h	/^    SDL_Texture* font_image_tetris;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
+font_image_title	menustate.h	/^    SDL_Texture*        font_image_title;$/;"	m	class:MenuState	typeref:typename:SDL_Texture *
+font_new_game	playstate.h	/^    TTF_Font*   font_new_game;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_pause	playstate.h	/^    TTF_Font*   font_pause;     \/\/暂停时显示$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_play	menustate.h	/^    TTF_Font*           font_play;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
+font_quit	menustate.h	/^    TTF_Font*           font_quit;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
+font_quit	playstate.h	/^    TTF_Font*   font_quit;$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_score	playstate.h	/^    TTF_Font*   font_score;     \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_score_text	playstate.h	/^    TTF_Font*   font_score_text;\/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_tetris	playstate.h	/^    TTF_Font*   font_tetris;    \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
+font_title	menustate.h	/^    TTF_Font*           font_title;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
+frame_rate	playstate.cc	/^float PlayState::frame_rate(GameEngine* game, int* last_time, int* this_time){$/;"	f	class:PlayState	typeref:typename:float
+game_over	playstate.h	/^    bool    game_over;     \/\/当游戏结束时返回true$/;"	m	class:PlayState	typeref:typename:bool
+getScore	board.h	/^    int getScore(){return score;}               \/\/获取分数$/;"	f	class:Board	typeref:typename:int
+getShadow	tetromino.cc	/^void Tetris::getShadow(Board *board, int shadow_y[]){$/;"	f	class:Tetris	typeref:typename:void
+getX	tetromino.h	/^    int getX(int i){return x + relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:int
+getY	tetromino.h	/^    int getY(int i){return x + relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:int
+has_landed	tetromino.h	/^    bool has_landed(){return status == LANDED;}$/;"	f	class:Tetris	typeref:typename:bool
+height	game_engine.h	/^    int height;$/;"	m	class:GameEngine	typeref:typename:int
+init	introstate.cc	/^void IntroState::init(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+init	menustate.cc	/^void MenuState::init(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+init	playstate.cc	/^void PlayState::init(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+input	game_engine.cc	/^void GameEngine::input(){$/;"	f	class:GameEngine	typeref:typename:void
+input	introstate.cc	/^void IntroState::input(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+input	menustate.cc	/^void MenuState::input(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+input	playstate.cc	/^void PlayState::input(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+items	menustate.h	/^    int items;$/;"	m	class:MenuState	typeref:typename:int
+judgeFull	board.cc	/^bool Board::judgeFull(int row){$/;"	f	class:Board	typeref:typename:bool
+lands	tetromino.h	/^    void lands() {status = LANDED;}$/;"	f	class:Tetris	typeref:typename:void
+last_time	playstate.h	/^    int     last_time;$/;"	m	class:PlayState	typeref:typename:int
+letItGo	board.cc	/^void Board::letItGo(){$/;"	f	class:Board	typeref:typename:void
+loadTexture	utilities.cc	/^SDL_Texture* loadTexture(const std::string &file,$/;"	f	typeref:typename:SDL_Texture *
+logo	introstate.h	/^    SDL_Texture* logo;$/;"	m	class:IntroState	typeref:typename:SDL_Texture *
+logo_status	introstate.h	/^    Status logo_status;$/;"	m	class:IntroState	typeref:typename:Status
+m_introstate	introstate.cc	/^IntroState IntroState::m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
+m_introstate	introstate.h	/^    static IntroState m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
+m_menustate	menustate.cc	/^MenuState MenuState::m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
+m_menustate	menustate.h	/^    static MenuState m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
+m_playstate	playstate.cc	/^PlayState PlayState::m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+m_playstate	playstate.h	/^    static PlayState m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+main	main.cc	/^int  main(int argc, char* argv[]){$/;"	f	typeref:typename:int
+movement	tetromino.h	/^    Movement movement;$/;"	m	class:Tetris	typeref:typename:Movement
+newgamedown	playstate.h	/^    bool    newgamedown;   \/\/按下开始键$/;"	m	class:PlayState	typeref:typename:bool
+newgameup	playstate.h	/^    bool    newgameup;     \/\/松开开始键$/;"	m	class:PlayState	typeref:typename:bool
+newgamex1	playstate.h	/^    int     newgamex1;$/;"	m	class:PlayState	typeref:typename:int
+newgamex2	playstate.h	/^    int     newgamex2;$/;"	m	class:PlayState	typeref:typename:int
+newgamey1	playstate.h	/^    int     newgamey1;$/;"	m	class:PlayState	typeref:typename:int
+newgamey2	playstate.h	/^    int     newgamey2;$/;"	m	class:PlayState	typeref:typename:int
+next_tetris	playstate.h	/^    Tetris* next_tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
+pause	introstate.cc	/^void IntroState::pause(){}$/;"	f	class:IntroState	typeref:typename:void
+pause	menustate.cc	/^void MenuState::pause(){}$/;"	f	class:MenuState	typeref:typename:void
+pause	playstate.cc	/^void PlayState::pause(){$/;"	f	class:PlayState	typeref:typename:void
+paused	playstate.h	/^    bool    paused;$/;"	m	class:PlayState	typeref:typename:bool
+play	menustate.h	/^    bool play;$/;"	m	class:MenuState	typeref:typename:bool
+play_height	menustate.h	/^    int play_width, play_height;$/;"	m	class:MenuState	typeref:typename:int
+play_width	menustate.h	/^    int play_width, play_height;$/;"	m	class:MenuState	typeref:typename:int
+pop_state	game_engine.cc	/^void GameEngine::pop_state(){$/;"	f	class:GameEngine	typeref:typename:void
+push_state	game_engine.cc	/^void GameEngine::push_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
+quit	game_engine.h	/^    void quit(){exit = true;}$/;"	f	class:GameEngine	typeref:typename:void
+quit_height	menustate.h	/^    int quit_width, quit_height;$/;"	m	class:MenuState	typeref:typename:int
+quit_width	menustate.h	/^    int quit_width, quit_height;$/;"	m	class:MenuState	typeref:typename:int
+quitdown	playstate.h	/^    bool    quitdown;      \/\/按下退出键$/;"	m	class:PlayState	typeref:typename:bool
+quitup	playstate.h	/^    bool    quitup;        \/\/松开退出键$/;"	m	class:PlayState	typeref:typename:bool
+rd	playstate.cc	/^    std::random_device rd;$/;"	v	namespace:__anon8ab058700110	typeref:typename:std::random_device
+relatLocate	tetromino.h	/^    int (*relatLocate)[2];  \/\/相对中心方块坐标$/;"	m	class:Tetris	typeref:typename:int (*)[2]
+releaseBlocks	playstate.cc	/^void PlayState::releaseBlocks(){$/;"	f	class:PlayState	typeref:typename:void
+render	game_engine.cc	/^void GameEngine::render(){$/;"	f	class:GameEngine	typeref:typename:void
+render	introstate.cc	/^void IntroState::render(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+render	menustate.cc	/^void MenuState::render(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+render	playstate.cc	/^void PlayState::render(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+renderText	utilities.cc	/^SDL_Texture* renderText(const std::string &message,$/;"	f	typeref:typename:SDL_Texture *
+renderTexture	utilities.cc	/^void renderTexture(SDL_Texture* tex,$/;"	f	typeref:typename:void
+render_logo	introstate.cc	/^void IntroState::render_logo(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+render_score	board.h	/^    bool render_score;$/;"	m	class:Board	typeref:typename:bool
+renderer	game_engine.h	/^    SDL_Renderer * renderer;$/;"	m	class:GameEngine	typeref:typename:SDL_Renderer *
+reset	introstate.cc	/^void IntroState::reset(){}$/;"	f	class:IntroState	typeref:typename:void
+reset	menustate.cc	/^void MenuState::reset(){}$/;"	f	class:MenuState	typeref:typename:void
+reset	playstate.cc	/^void PlayState::reset(){$/;"	f	class:PlayState	typeref:typename:void
+resume	introstate.cc	/^void IntroState::resume(){}$/;"	f	class:IntroState	typeref:typename:void
+resume	menustate.cc	/^void MenuState::resume(){}$/;"	f	class:MenuState	typeref:typename:void
+resume	playstate.cc	/^void PlayState::resume(){$/;"	f	class:PlayState	typeref:typename:void
+rotate	tetromino.h	/^    bool rotate;    \/\/是否旋转$/;"	m	class:Tetris	typeref:typename:bool
+rotateLeft	tetromino.cc	/^void Tetris::rotateLeft(){$/;"	f	class:Tetris	typeref:typename:void
+rotateRight	tetromino.cc	/^void Tetris::rotateRight(){$/;"	f	class:Tetris	typeref:typename:void
+runnning	game_engine.h	/^    bool runnning(){return !exit;}$/;"	f	class:GameEngine	typeref:typename:bool
+score	board.h	/^    int score;$/;"	m	class:Board	typeref:typename:int
+select_down	menustate.cc	/^void MenuState::select_down(){$/;"	f	class:MenuState	typeref:typename:void
+select_up	menustate.cc	/^void MenuState::select_up(){$/;"	f	class:MenuState	typeref:typename:void
+setPoint	tetromino.h	/^    void setPoint(int xx, int yy){x = xx; y = yy;}$/;"	f	class:Tetris	typeref:typename:void
+setX	tetromino.h	/^    void setX(int i, int new_x){x = new_x - relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:void
+setY	tetromino.h	/^    void setY(int i, int new_y){y = new_y - relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:void
+shift	tetromino.h	/^    bool shift;     \/\/左转(true)&&k,右转(false)$/;"	m	class:Tetris	typeref:typename:bool
+speedup	tetromino.h	/^    bool speedup;   \/\/是否加速$/;"	m	class:Tetris	typeref:typename:bool
+states	game_engine.h	/^    std::vector<GameState*> states;$/;"	m	class:GameEngine	typeref:typename:std::vector<GameState * >
+status	tetromino.h	/^    Status status;$/;"	m	class:Tetris	typeref:typename:Status
+tetris	playstate.h	/^    Tetris* tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
+this_time	playstate.h	/^    int     this_time;$/;"	m	class:PlayState	typeref:typename:int
+time_counter	playstate.h	/^    float   time_counter;$/;"	m	class:PlayState	typeref:typename:float
+time_till_drop	playstate.h	/^    float   time_till_drop;$/;"	m	class:PlayState	typeref:typename:float
+title_height	menustate.h	/^    int title_width, title_height;$/;"	m	class:MenuState	typeref:typename:int
+title_width	menustate.h	/^    int title_width, title_height;$/;"	m	class:MenuState	typeref:typename:int
+type	tetromino.h	/^    int type;               \/\/方块种类(0-6)$/;"	m	class:Tetris	typeref:typename:int
+update	game_engine.cc	/^void GameEngine::update(){$/;"	f	class:GameEngine	typeref:typename:void
+update	introstate.cc	/^void IntroState::update(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+update	menustate.cc	/^void MenuState::update(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+update	playstate.cc	/^void PlayState::update(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+white	menustate.h	/^    SDL_Color           white;$/;"	m	class:MenuState	typeref:typename:SDL_Color
+white	playstate.h	/^    SDL_Color   white;$/;"	m	class:PlayState	typeref:typename:SDL_Color
+width	game_engine.h	/^    int width;$/;"	m	class:GameEngine	typeref:typename:int
+window	game_engine.h	/^    SDL_Window * window;$/;"	m	class:GameEngine	typeref:typename:SDL_Window *
+x	tetromino.h	/^    int x, y;               \/\/方块型相对位置中(0,0)的全局坐标$/;"	m	class:Tetris	typeref:typename:int
+y	tetromino.h	/^    int x, y;               \/\/方块型相对位置中(0,0)的全局坐标$/;"	m	class:Tetris	typeref:typename:int

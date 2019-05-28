@@ -1,5 +1,5 @@
 BINARY 			:= tetris
-SRCS			:= $(wildcard src/*.cpp)
+SRCS			:= $(wildcard include/*.cpp)
 OBJS			:= $(SRCS:.cpp=.o)
 
 DEBUG			:= -g

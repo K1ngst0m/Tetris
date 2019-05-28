@@ -1,5 +1,5 @@
-#ifndef _TETRIS_H
-#define _TETRIS_H
+#ifndef SRC_TETRIS_H
+#define SRC_TETRIS_H
 
 class Board;
 

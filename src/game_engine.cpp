@@ -1,12 +1,13 @@
 
-#include"gameEngine.h"
+#include"game_engine.h"
 #include<iostream>
-#include"gameState.h"
+#include"gamestate.h"
 
 GameEngine::GameEngine(){
-    if(SDL_Init(SDL_INIT_EVERYTHING) == -1){
-        std::cout << SDL_GetError() << std::endl;
-    } //SDL启动
+    SDL_Init(SDL_INIT_EVERYTHING);
+    //if(SDL_Init(SDL_INIT_EVERYTHING) == -1){
+        //std::cout << SDL_GetError() << std::endl;
+    //} //SDL启动
 
     //窗口长宽
     width = 500;
@@ -19,13 +20,13 @@ GameEngine::GameEngine(){
                               width,
                               height,
                               SDL_WINDOW_SHOWN);
-    if (window == nullptr){ std::cout << SDL_GetError() << std::endl; }
+    //if (window == nullptr){ std::cout << SDL_GetError() << std::endl; }
 
 
     //创建渲染器
     renderer = SDL_CreateRenderer(window, -1,
                                   SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    if (renderer == nullptr){ std::cout << SDL_GetError() << std::endl; }
+    //if (renderer == nullptr){ std::cout << SDL_GetError() << std::endl; }
 
     exit = false;
 }

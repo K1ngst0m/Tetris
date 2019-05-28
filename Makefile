@@ -1,6 +1,6 @@
 BINARY 			:= tetris
-SRCS			:= $(wildcard src/*.cc)
-OBJS			:= $(SRCS:.cc=.o)
+SRCS			:= $(wildcard src/*.cpp)
+OBJS			:= $(SRCS:.cpp=.o)
 
 DEBUG			:= -g
 
@@ -16,7 +16,7 @@ LDFLAGS			+= $(SDL_LIB)
 all: $(BINARY)
 
 $(BINARY): $(OBJS)
-	$(LINK.cc) $(OBJS) -o $(BINARY) $(LDFLAGS)
+	$(LINK.cpp) $(OBJS) -o $(BINARY) $(LDFLAGS)
 
 .depend: $(SRCS)
 	@- $(RM) .depend

@@ -1,10 +1,10 @@
-#ifndef _MENUSTATE_H
-#define _MENUSTATE_H
+#ifndef SRC_MENUSTATE_H
+#define SRC_MENUSTATE_H
 
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 
-#include"gameState.h"
+#include"gamestate.h"
 
 class MenuState: public GameState{
 public:

@@ -1,5 +1,5 @@
-#ifndef _GAMEENGINE_H
-#define _GAMEENGINE_H
+#ifndef SRC_GAME_ENGINE_H
+#define SRC_GAME_ENGINE_H
 
 #include<SDL2/SDL.h>
 #include<vector>

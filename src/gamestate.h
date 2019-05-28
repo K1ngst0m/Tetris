@@ -1,7 +1,7 @@
 #ifndef _GAMESTATE_H
 #define _GAMESTATE_H
 
-#include "gameEngine.h"
+#include "game_engine.h"
 
 class GameState{
 public:

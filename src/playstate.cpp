@@ -1,9 +1,9 @@
-#include"playState.h"
+#include"playstate.h"
 #include<random>
-#include"gameEngine.h"
-#include"reuse.h"
+#include"game_engine.h"
+#include"utilities.h"
 #include"board.h"
-#include"tetris.h"
+#include"tetromino.h"
 
 namespace{
     std::random_device rd;

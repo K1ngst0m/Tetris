@@ -1,5 +1,5 @@
-#ifndef _PLAYSTATE_H
-#define _PLAYSTATE_H
+#ifndef SRC_PLAYSTATE_H
+#define SRC_PLAYSTATE_H
 
 #include"irrKlang.h"
 #include<SDL2/SDL.h>
@@ -7,7 +7,7 @@
 #include<SDL2/SDL_image.h>
 #include<random>
 
-#include"gameState.h"
+#include"gamestate.h"
 
 class Tetris;
 class Board;

@@ -1,10 +1,10 @@
-#ifndef _INTORSTATE_H
-#define _INTORSTATE_H
+#ifndef SRC_INTORSTATE_H
+#define SRC_INTORSTATE_H
 
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_image.h>
 
-#include"gameState.h"
+#include"gamestate.h"
 
 class IntroState: public GameState{
 public:

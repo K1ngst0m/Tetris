@@ -18,13 +18,6 @@ all: $(BINARY)
 $(BINARY): $(OBJS)
 	$(LINK.cpp) $(OBJS) -o $(BINARY) $(LDFLAGS)
 
-.depend: $(SRCS)
-	@- $(RM) .depend
-	@- $(CXX) $(CPPFLAGS) $(CXXFLAGS) -MM $^ | sed -E 's|^([^ ])|src/\1|' > .depend;
-
--include .depend
-
 clean:
 	@- $(RM) $(BINARY)
 	@- $(RM) $(OBJS)
-	@- $(RM) .depend

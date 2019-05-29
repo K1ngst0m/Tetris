@@ -47,6 +47,7 @@ private:
 
     //Texture
     SDL_Texture* block_texture;
+    SDL_Texture* background_texture;
 
     //Fonts
     SDL_Color   white;

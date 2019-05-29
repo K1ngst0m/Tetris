@@ -5,20 +5,21 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
-Board	board.cc	/^Board::Board(){$/;"	f	class:Board
+BONUS	board.h	/^    static const int BONUS = 3; \/\/分数相关$/;"	m	class:Board	typeref:typename:const int
+Board	board.cpp	/^Board::Board(){$/;"	f	class:Board
 Board	board.h	/^class Board{ \/\/方块池\/游戏边界$/;"	c
 COLS	board.h	/^    static const int COLS = 15; \/\/列数$/;"	m	class:Board	typeref:typename:const int
 FADE_IN	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
 FADE_OUT	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:IntroState::Status
 FALLING	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
 GAME_OFFSET	playstate.h	/^    static const int GAME_OFFSET = 20;$/;"	m	class:PlayState	typeref:typename:const int
-GameEngine	game_engine.cc	/^GameEngine::GameEngine(){$/;"	f	class:GameEngine
+GameEngine	game_engine.cpp	/^GameEngine::GameEngine(){$/;"	f	class:GameEngine
 GameEngine	game_engine.h	/^class GameEngine{$/;"	c
 GameState	gamestate.h	/^    GameState(){}$/;"	f	class:GameState
 GameState	gamestate.h	/^class GameState{$/;"	c
-HEI_PER_BLOCK	board.h	/^    static const int HEI_PER_BLOCK = WINDOW_HEIGHT \/ COLS; \/\/单行高度$/;"	m	class:Board	typeref:typename:const int
+HEI_PER_BLOCK	board.h	/^    static const int HEI_PER_BLOCK = WINDOW_HEIGHT \/ ROWS; \/\/单行宽度$/;"	m	class:Board	typeref:typename:const int
 INACTIVE	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
-Instance	introstate.h	/^    static IntroState* Instance(){return &m_introstate;}$/;"	f	class:IntroState	typeref:typename:IntroState *
+Instance	introstate.h	/^    static IntroState* Instance(){ return &m_introstate; }$/;"	f	class:IntroState	typeref:typename:IntroState *
 Instance	menustate.h	/^    static MenuState* Instance() {return &m_menustate;}$/;"	f	class:MenuState	typeref:typename:MenuState *
 Instance	playstate.h	/^    static PlayState* Instance(){ return &m_playstate; }$/;"	f	class:PlayState	typeref:typename:PlayState *
 IntroState	introstate.h	/^    IntroState(){}$/;"	f	class:IntroState
@@ -35,45 +36,44 @@ REMAIN	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	e	enum:In
 RIGHT	tetromino.h	/^    enum Movement {NONE = 0, LEFT = -1, RIGHT = 1};$/;"	e	enum:Tetris::Movement
 ROWS	board.h	/^    static const int ROWS = 30; \/\/行数$/;"	m	class:Board	typeref:typename:const int
 SIZE	tetromino.h	/^    static const int SIZE = 4; \/\/方块边界$/;"	m	class:Tetris	typeref:typename:const int
-SRC_BOARD_H	board.h	/^#define SRC_BOARD_H$/;"	d
-SRC_GAME_ENGINE_H	game_engine.h	/^#define SRC_GAME_ENGINE_H$/;"	d
+SRC_BOARD_H_	board.h	/^#define SRC_BOARD_H_$/;"	d
+SRC_GAMESTATE_H_	gamestate.h	/^#define SRC_GAMESTATE_H_$/;"	d
+SRC_GAME_ENGINE_H_	game_engine.h	/^#define SRC_GAME_ENGINE_H_$/;"	d
 SRC_INTORSTATE_H	introstate.h	/^#define SRC_INTORSTATE_H$/;"	d
 SRC_MENUSTATE_H	menustate.h	/^#define SRC_MENUSTATE_H$/;"	d
-SRC_PLAYSTATE_H	playstate.h	/^#define SRC_PLAYSTATE_H$/;"	d
-SRC_REUSE_H	utilities.h	/^#define SRC_REUSE_H$/;"	d
-SRC_TETRIS_H	tetromino.h	/^#define SRC_TETRIS_H$/;"	d
+SRC_PLAYSTATE_H_	playstate.h	/^#define SRC_PLAYSTATE_H_$/;"	d
+SRC_TETRIS_H_	tetromino.h	/^#define SRC_TETRIS_H_$/;"	d
+SRC_UTILITIES_H_	utilities.h	/^#define SRC_UTILITIES_H_$/;"	d
 Status	introstate.h	/^    enum Status {FADE_IN, REMAIN, FADE_OUT};$/;"	g	class:IntroState
 Status	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	g	class:Tetris
-Tetris	tetromino.cc	/^Tetris::Tetris(int n_type){$/;"	f	class:Tetris
+Tetris	tetromino.cpp	/^Tetris::Tetris(int n_type){$/;"	f	class:Tetris
 Tetris	tetromino.h	/^class Tetris{$/;"	c
 WAITING	tetromino.h	/^    enum Status {INACTIVE, WAITING, FALLING, LANDED};$/;"	e	enum:Tetris::Status
 WINDOW_HEIGHT	board.h	/^    static const int WINDOW_HEIGHT = 600;\/\/高度$/;"	m	class:Board	typeref:typename:const int
 WINDOW_WIDTH	board.h	/^    static const int WINDOW_WIDTH = 300;\/\/宽度$/;"	m	class:Board	typeref:typename:const int
-WTH_PER_BLOCK	board.h	/^    static const int WTH_PER_BLOCK = WINDOW_WIDTH \/ ROWS;  \/\/单列高度$/;"	m	class:Board	typeref:typename:const int
-_GAMESTATE_H	gamestate.h	/^#define _GAMESTATE_H$/;"	d
-__anon8ab058700110	playstate.cc	/^namespace{$/;"	n	file:
+WTH_PER_BLOCK	board.h	/^    static const int WTH_PER_BLOCK = WINDOW_WIDTH \/ COLS;  \/\/单列高度$/;"	m	class:Board	typeref:typename:const int
 acceleration	playstate.h	/^    float   acceleration;$/;"	m	class:PlayState	typeref:typename:float
-add	board.cc	/^bool Board::add(Tetris* block){$/;"	f	class:Board	typeref:typename:bool
+add	board.cpp	/^bool Board::add(Tetris* block){$/;"	f	class:Board	typeref:typename:bool
 add_score	board.h	/^    void add_score(int add){score += add;}$/;"	f	class:Board	typeref:typename:void
 add_to_x	tetromino.h	/^    void add_to_x(int x_offset){x += x_offset;}$/;"	f	class:Tetris	typeref:typename:void
 alpha	introstate.h	/^    int alpha;$/;"	m	class:IntroState	typeref:typename:int
-block_table	tetromino.cc	/^const int Tetris::block_table[7][4][2] = {$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
+block_table	tetromino.cpp	/^const int Tetris::block_table[7][4][2] = {$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
 block_table	tetromino.h	/^    static const int block_table[7][4][2];$/;"	m	class:Tetris	typeref:typename:const int[7][4][2]
 block_texture	playstate.h	/^    SDL_Texture* block_texture;$/;"	m	class:PlayState	typeref:typename:SDL_Texture *
 board	playstate.h	/^    Board* board;$/;"	m	class:PlayState	typeref:typename:Board *
-change_state	game_engine.cc	/^void GameEngine::change_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
-changestate	gamestate.h	/^    void changestate(GameEngine* game, GameState* state){$/;"	f	class:GameState	typeref:typename:void
-cleanPerRows	board.cc	/^void Board::cleanPerRows(int i){$/;"	f	class:Board	typeref:typename:void
-cleanUp	introstate.cc	/^void IntroState::cleanUp(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
-cleanUp	menustate.cc	/^void MenuState::cleanUp(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
-cleanUp	playstate.cc	/^void PlayState::cleanUp(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
-clean_up	game_engine.cc	/^void GameEngine::clean_up(){$/;"	f	class:GameEngine	typeref:typename:void
+change_state	game_engine.cpp	/^void GameEngine::change_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
+change_state	gamestate.h	/^    void change_state(GameEngine* game, GameState* state){$/;"	f	class:GameState	typeref:typename:void
+cleanPerRows	board.cpp	/^void Board::cleanPerRows(int i){$/;"	f	class:Board	typeref:typename:void
+clean_up	game_engine.cpp	/^void GameEngine::clean_up(){$/;"	f	class:GameEngine	typeref:typename:void
+clean_up	introstate.cpp	/^void IntroState::clean_up(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+clean_up	menustate.cpp	/^void MenuState::clean_up(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+clean_up	playstate.cpp	/^void PlayState::clean_up(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
 color	board.h	/^    int color[ROWS][COLS];     \/\/二维数组表示方块坐标$/;"	m	class:Board	typeref:typename:int[][]
-createButton	playstate.cc	/^void PlayState::createButton(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
+createButton	playstate.cpp	/^void PlayState::createButton(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
 currently_selected	menustate.h	/^    int currently_selected;$/;"	m	class:MenuState	typeref:typename:int
-drawBlock	playstate.cc	/^void PlayState::drawBlock(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
+drawBlock	playstate.cpp	/^void PlayState::drawBlock(GameEngine* game,$/;"	f	class:PlayState	typeref:typename:void
 drop	tetromino.h	/^    void drop()  {status = FALLING;}$/;"	f	class:Tetris	typeref:typename:void
-execute	game_engine.cc	/^void GameEngine::execute(){$/;"	f	class:GameEngine	typeref:typename:void
+execute	game_engine.cpp	/^void GameEngine::execute(){$/;"	f	class:GameEngine	typeref:typename:void
 exit	game_engine.h	/^    bool exit;$/;"	m	class:GameEngine	typeref:typename:bool
 exit	introstate.h	/^    bool exit;$/;"	m	class:IntroState	typeref:typename:bool
 exit	menustate.h	/^    bool exit;$/;"	m	class:MenuState	typeref:typename:bool
@@ -99,36 +99,36 @@ font_score	playstate.h	/^    TTF_Font*   font_score;     \/\/$/;"	m	class:PlaySt
 font_score_text	playstate.h	/^    TTF_Font*   font_score_text;\/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
 font_tetris	playstate.h	/^    TTF_Font*   font_tetris;    \/\/$/;"	m	class:PlayState	typeref:typename:TTF_Font *
 font_title	menustate.h	/^    TTF_Font*           font_title;$/;"	m	class:MenuState	typeref:typename:TTF_Font *
-frame_rate	playstate.cc	/^float PlayState::frame_rate(GameEngine* game, int* last_time, int* this_time){$/;"	f	class:PlayState	typeref:typename:float
+frame_rate	playstate.cpp	/^float PlayState::frame_rate(GameEngine* game, int* last_time, int* this_time){$/;"	f	class:PlayState	typeref:typename:float
 game_over	playstate.h	/^    bool    game_over;     \/\/当游戏结束时返回true$/;"	m	class:PlayState	typeref:typename:bool
 getScore	board.h	/^    int getScore(){return score;}               \/\/获取分数$/;"	f	class:Board	typeref:typename:int
-getShadow	tetromino.cc	/^void Tetris::getShadow(Board *board, int shadow_y[]){$/;"	f	class:Tetris	typeref:typename:void
+getShadow	tetromino.cpp	/^void Tetris::getShadow(Board *board, int shadow_y[]){$/;"	f	class:Tetris	typeref:typename:void
 getX	tetromino.h	/^    int getX(int i){return x + relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:int
-getY	tetromino.h	/^    int getY(int i){return x + relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:int
+getY	tetromino.h	/^    int getY(int i){return y + relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:int
 has_landed	tetromino.h	/^    bool has_landed(){return status == LANDED;}$/;"	f	class:Tetris	typeref:typename:bool
 height	game_engine.h	/^    int height;$/;"	m	class:GameEngine	typeref:typename:int
-init	introstate.cc	/^void IntroState::init(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
-init	menustate.cc	/^void MenuState::init(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
-init	playstate.cc	/^void PlayState::init(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
-input	game_engine.cc	/^void GameEngine::input(){$/;"	f	class:GameEngine	typeref:typename:void
-input	introstate.cc	/^void IntroState::input(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
-input	menustate.cc	/^void MenuState::input(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
-input	playstate.cc	/^void PlayState::input(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+init	introstate.cpp	/^void IntroState::init(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+init	menustate.cpp	/^void MenuState::init(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+init	playstate.cpp	/^void PlayState::init(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+input	game_engine.cpp	/^void GameEngine::input(){$/;"	f	class:GameEngine	typeref:typename:void
+input	introstate.cpp	/^void IntroState::input(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+input	menustate.cpp	/^void MenuState::input(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+input	playstate.cpp	/^void PlayState::input(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
 items	menustate.h	/^    int items;$/;"	m	class:MenuState	typeref:typename:int
-judgeFull	board.cc	/^bool Board::judgeFull(int row){$/;"	f	class:Board	typeref:typename:bool
+judgeFull	board.cpp	/^bool Board::judgeFull(int row){$/;"	f	class:Board	typeref:typename:bool
 lands	tetromino.h	/^    void lands() {status = LANDED;}$/;"	f	class:Tetris	typeref:typename:void
 last_time	playstate.h	/^    int     last_time;$/;"	m	class:PlayState	typeref:typename:int
-letItGo	board.cc	/^void Board::letItGo(){$/;"	f	class:Board	typeref:typename:void
-loadTexture	utilities.cc	/^SDL_Texture* loadTexture(const std::string &file,$/;"	f	typeref:typename:SDL_Texture *
+letItGo	board.cpp	/^void Board::letItGo(){$/;"	f	class:Board	typeref:typename:void
+loadTexture	utilities.cpp	/^SDL_Texture* loadTexture(const std::string &file,$/;"	f	typeref:typename:SDL_Texture *
 logo	introstate.h	/^    SDL_Texture* logo;$/;"	m	class:IntroState	typeref:typename:SDL_Texture *
 logo_status	introstate.h	/^    Status logo_status;$/;"	m	class:IntroState	typeref:typename:Status
-m_introstate	introstate.cc	/^IntroState IntroState::m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
+m_introstate	introstate.cpp	/^IntroState IntroState::m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
 m_introstate	introstate.h	/^    static IntroState m_introstate;$/;"	m	class:IntroState	typeref:typename:IntroState
-m_menustate	menustate.cc	/^MenuState MenuState::m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
+m_menustate	menustate.cpp	/^MenuState MenuState::m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
 m_menustate	menustate.h	/^    static MenuState m_menustate;$/;"	m	class:MenuState	typeref:typename:MenuState
-m_playstate	playstate.cc	/^PlayState PlayState::m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
+m_playstate	playstate.cpp	/^PlayState PlayState::m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
 m_playstate	playstate.h	/^    static PlayState m_playstate;$/;"	m	class:PlayState	typeref:typename:PlayState
-main	main.cc	/^int  main(int argc, char* argv[]){$/;"	f	typeref:typename:int
+main	main.cpp	/^int  main(int argc, char* argv[]){$/;"	f	typeref:typename:int
 movement	tetromino.h	/^    Movement movement;$/;"	m	class:Tetris	typeref:typename:Movement
 newgamedown	playstate.h	/^    bool    newgamedown;   \/\/按下开始键$/;"	m	class:PlayState	typeref:typename:bool
 newgameup	playstate.h	/^    bool    newgameup;     \/\/松开开始键$/;"	m	class:PlayState	typeref:typename:bool
@@ -137,45 +137,44 @@ newgamex2	playstate.h	/^    int     newgamex2;$/;"	m	class:PlayState	typeref:typ
 newgamey1	playstate.h	/^    int     newgamey1;$/;"	m	class:PlayState	typeref:typename:int
 newgamey2	playstate.h	/^    int     newgamey2;$/;"	m	class:PlayState	typeref:typename:int
 next_tetris	playstate.h	/^    Tetris* next_tetris;$/;"	m	class:PlayState	typeref:typename:Tetris *
-pause	introstate.cc	/^void IntroState::pause(){}$/;"	f	class:IntroState	typeref:typename:void
-pause	menustate.cc	/^void MenuState::pause(){}$/;"	f	class:MenuState	typeref:typename:void
-pause	playstate.cc	/^void PlayState::pause(){$/;"	f	class:PlayState	typeref:typename:void
+pause	introstate.cpp	/^void IntroState::pause(){}$/;"	f	class:IntroState	typeref:typename:void
+pause	menustate.cpp	/^void MenuState::pause(){}$/;"	f	class:MenuState	typeref:typename:void
+pause	playstate.cpp	/^void PlayState::pause(){$/;"	f	class:PlayState	typeref:typename:void
 paused	playstate.h	/^    bool    paused;$/;"	m	class:PlayState	typeref:typename:bool
 play	menustate.h	/^    bool play;$/;"	m	class:MenuState	typeref:typename:bool
-play_height	menustate.h	/^    int play_width, play_height;$/;"	m	class:MenuState	typeref:typename:int
-play_width	menustate.h	/^    int play_width, play_height;$/;"	m	class:MenuState	typeref:typename:int
-pop_state	game_engine.cc	/^void GameEngine::pop_state(){$/;"	f	class:GameEngine	typeref:typename:void
-push_state	game_engine.cc	/^void GameEngine::push_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
+play_height	menustate.h	/^    int play_width  , play_height;$/;"	m	class:MenuState	typeref:typename:int
+play_width	menustate.h	/^    int play_width  , play_height;$/;"	m	class:MenuState	typeref:typename:int
+pop_state	game_engine.cpp	/^void GameEngine::pop_state(){$/;"	f	class:GameEngine	typeref:typename:void
+push_state	game_engine.cpp	/^void GameEngine::push_state(GameState* state){$/;"	f	class:GameEngine	typeref:typename:void
 quit	game_engine.h	/^    void quit(){exit = true;}$/;"	f	class:GameEngine	typeref:typename:void
-quit_height	menustate.h	/^    int quit_width, quit_height;$/;"	m	class:MenuState	typeref:typename:int
-quit_width	menustate.h	/^    int quit_width, quit_height;$/;"	m	class:MenuState	typeref:typename:int
+quit_height	menustate.h	/^    int quit_width  , quit_height;$/;"	m	class:MenuState	typeref:typename:int
+quit_width	menustate.h	/^    int quit_width  , quit_height;$/;"	m	class:MenuState	typeref:typename:int
 quitdown	playstate.h	/^    bool    quitdown;      \/\/按下退出键$/;"	m	class:PlayState	typeref:typename:bool
 quitup	playstate.h	/^    bool    quitup;        \/\/松开退出键$/;"	m	class:PlayState	typeref:typename:bool
-rd	playstate.cc	/^    std::random_device rd;$/;"	v	namespace:__anon8ab058700110	typeref:typename:std::random_device
 relatLocate	tetromino.h	/^    int (*relatLocate)[2];  \/\/相对中心方块坐标$/;"	m	class:Tetris	typeref:typename:int (*)[2]
-releaseBlocks	playstate.cc	/^void PlayState::releaseBlocks(){$/;"	f	class:PlayState	typeref:typename:void
-render	game_engine.cc	/^void GameEngine::render(){$/;"	f	class:GameEngine	typeref:typename:void
-render	introstate.cc	/^void IntroState::render(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
-render	menustate.cc	/^void MenuState::render(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
-render	playstate.cc	/^void PlayState::render(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
-renderText	utilities.cc	/^SDL_Texture* renderText(const std::string &message,$/;"	f	typeref:typename:SDL_Texture *
-renderTexture	utilities.cc	/^void renderTexture(SDL_Texture* tex,$/;"	f	typeref:typename:void
-render_logo	introstate.cc	/^void IntroState::render_logo(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
-render_score	board.h	/^    bool render_score;$/;"	m	class:Board	typeref:typename:bool
+releaseBlocks	playstate.cpp	/^void PlayState::releaseBlocks(){$/;"	f	class:PlayState	typeref:typename:void
+render	game_engine.cpp	/^void GameEngine::render(){$/;"	f	class:GameEngine	typeref:typename:void
+render	introstate.cpp	/^void IntroState::render(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+render	menustate.cpp	/^void MenuState::render(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+render	playstate.cpp	/^void PlayState::render(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+renderText	utilities.cpp	/^SDL_Texture* renderText(const std::string &message,$/;"	f	typeref:typename:SDL_Texture *
+renderTexture	utilities.cpp	/^void renderTexture(SDL_Texture* tex,$/;"	f	typeref:typename:void
+render_logo	introstate.cpp	/^void IntroState::render_logo(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+render_score	board.h	/^    bool render_score;          \/\/刷新分数$/;"	m	class:Board	typeref:typename:bool
 renderer	game_engine.h	/^    SDL_Renderer * renderer;$/;"	m	class:GameEngine	typeref:typename:SDL_Renderer *
-reset	introstate.cc	/^void IntroState::reset(){}$/;"	f	class:IntroState	typeref:typename:void
-reset	menustate.cc	/^void MenuState::reset(){}$/;"	f	class:MenuState	typeref:typename:void
-reset	playstate.cc	/^void PlayState::reset(){$/;"	f	class:PlayState	typeref:typename:void
-resume	introstate.cc	/^void IntroState::resume(){}$/;"	f	class:IntroState	typeref:typename:void
-resume	menustate.cc	/^void MenuState::resume(){}$/;"	f	class:MenuState	typeref:typename:void
-resume	playstate.cc	/^void PlayState::resume(){$/;"	f	class:PlayState	typeref:typename:void
+reset	introstate.cpp	/^void IntroState::reset(){}$/;"	f	class:IntroState	typeref:typename:void
+reset	menustate.cpp	/^void MenuState::reset(){}$/;"	f	class:MenuState	typeref:typename:void
+reset	playstate.cpp	/^void PlayState::reset(){$/;"	f	class:PlayState	typeref:typename:void
+resume	introstate.cpp	/^void IntroState::resume(){}$/;"	f	class:IntroState	typeref:typename:void
+resume	menustate.cpp	/^void MenuState::resume(){}$/;"	f	class:MenuState	typeref:typename:void
+resume	playstate.cpp	/^void PlayState::resume(){$/;"	f	class:PlayState	typeref:typename:void
 rotate	tetromino.h	/^    bool rotate;    \/\/是否旋转$/;"	m	class:Tetris	typeref:typename:bool
-rotateLeft	tetromino.cc	/^void Tetris::rotateLeft(){$/;"	f	class:Tetris	typeref:typename:void
-rotateRight	tetromino.cc	/^void Tetris::rotateRight(){$/;"	f	class:Tetris	typeref:typename:void
+rotateLeft	tetromino.cpp	/^void Tetris::rotateLeft(){$/;"	f	class:Tetris	typeref:typename:void
+rotateRight	tetromino.cpp	/^void Tetris::rotateRight(){$/;"	f	class:Tetris	typeref:typename:void
 runnning	game_engine.h	/^    bool runnning(){return !exit;}$/;"	f	class:GameEngine	typeref:typename:bool
 score	board.h	/^    int score;$/;"	m	class:Board	typeref:typename:int
-select_down	menustate.cc	/^void MenuState::select_down(){$/;"	f	class:MenuState	typeref:typename:void
-select_up	menustate.cc	/^void MenuState::select_up(){$/;"	f	class:MenuState	typeref:typename:void
+select_down	menustate.cpp	/^void MenuState::select_down(){$/;"	f	class:MenuState	typeref:typename:void
+select_up	menustate.cpp	/^void MenuState::select_up(){$/;"	f	class:MenuState	typeref:typename:void
 setPoint	tetromino.h	/^    void setPoint(int xx, int yy){x = xx; y = yy;}$/;"	f	class:Tetris	typeref:typename:void
 setX	tetromino.h	/^    void setX(int i, int new_x){x = new_x - relatLocate[i][0];}$/;"	f	class:Tetris	typeref:typename:void
 setY	tetromino.h	/^    void setY(int i, int new_y){y = new_y - relatLocate[i][1];}$/;"	f	class:Tetris	typeref:typename:void
@@ -187,13 +186,13 @@ tetris	playstate.h	/^    Tetris* tetris;$/;"	m	class:PlayState	typeref:typename:
 this_time	playstate.h	/^    int     this_time;$/;"	m	class:PlayState	typeref:typename:int
 time_counter	playstate.h	/^    float   time_counter;$/;"	m	class:PlayState	typeref:typename:float
 time_till_drop	playstate.h	/^    float   time_till_drop;$/;"	m	class:PlayState	typeref:typename:float
-title_height	menustate.h	/^    int title_width, title_height;$/;"	m	class:MenuState	typeref:typename:int
-title_width	menustate.h	/^    int title_width, title_height;$/;"	m	class:MenuState	typeref:typename:int
+title_height	menustate.h	/^    int title_width , title_height;$/;"	m	class:MenuState	typeref:typename:int
+title_width	menustate.h	/^    int title_width , title_height;$/;"	m	class:MenuState	typeref:typename:int
 type	tetromino.h	/^    int type;               \/\/方块种类(0-6)$/;"	m	class:Tetris	typeref:typename:int
-update	game_engine.cc	/^void GameEngine::update(){$/;"	f	class:GameEngine	typeref:typename:void
-update	introstate.cc	/^void IntroState::update(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
-update	menustate.cc	/^void MenuState::update(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
-update	playstate.cc	/^void PlayState::update(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
+update	game_engine.cpp	/^void GameEngine::update(){$/;"	f	class:GameEngine	typeref:typename:void
+update	introstate.cpp	/^void IntroState::update(GameEngine* game){$/;"	f	class:IntroState	typeref:typename:void
+update	menustate.cpp	/^void MenuState::update(GameEngine* game){$/;"	f	class:MenuState	typeref:typename:void
+update	playstate.cpp	/^void PlayState::update(GameEngine* game){$/;"	f	class:PlayState	typeref:typename:void
 white	menustate.h	/^    SDL_Color           white;$/;"	m	class:MenuState	typeref:typename:SDL_Color
 white	playstate.h	/^    SDL_Color   white;$/;"	m	class:PlayState	typeref:typename:SDL_Color
 width	game_engine.h	/^    int width;$/;"	m	class:GameEngine	typeref:typename:int

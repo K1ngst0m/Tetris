@@ -11,48 +11,51 @@ PlayState PlayState::m_playstate;
 
 void PlayState::init(GameEngine* game){
 
-    board       = new Board();
-    tetris       = new Tetris(rand()%7);
-    next_tetris  = new Tetris(rand()%7);
+    board                   = new Board();
+    tetris                  = new Tetris(rand()%7);
+    next_tetris             = new Tetris(rand()%7);
 
     //砖块材质加载
-    block_texture = loadTexture("resource/img/block.bmp", game->renderer);
+    block_texture           = loadTexture("resource/img/block1.bmp", game->renderer);
+
+    //背景加载
+    background_texture      = loadTexture("resource/img/bg.png", game->renderer);
 
     //字体载入
     TTF_Init();
-    white = {255, 255, 255};
-    font_tetris     = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 16);
-    font_score_text = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
-    font_score      = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 20);
+    white                   = {255, 255, 255};
+    font_tetris             = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 16);
+    font_score_text         = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    font_score              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 20);
 
-    font_new_game   = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
-    font_pause      = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 16);
-    font_game_over  = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
-    font_quit       = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    //font_new_game           = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    font_pause              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 16);
+    font_game_over          = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    //font_quit               = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
 
-    font_image_new_game     = renderText("NEW GAME" , white, font_new_game  , game->renderer);
+    //font_image_new_game     = renderText("NEW GAME" , white, font_new_game  , game->renderer);
     font_image_pause        = renderText("PAUSE"    , white, font_pause     , game->renderer);
-    font_image_quit         = renderText("QUIT"     , white, font_quit      , game->renderer);
+    //font_image_quit         = renderText("QUIT"     , white, font_quit      , game->renderer);
     font_image_game_over    = renderText("GAME OVER", white, font_game_over , game->renderer);
     font_image_tetris       = renderText("TETRIS"   , white, font_tetris    , game->renderer);
-    font_image_score_text   = renderText("SCORE: "  , white, font_score_text, game->renderer);
+    font_image_score_text   = renderText("SCORE"  , white, font_score_text, game->renderer);
     font_image_score        = renderText(std::to_string(board->getScore())  , white, font_score, game->renderer);
 
-    acceleration    = 0.005f;
-    this_time       = 0;
-    last_time       = 0;
-    time_till_drop  = 0.3f;
-    time_counter    = 0.0f;
+    acceleration            = 0.005f;
+    this_time               = 0;
+    last_time               = 0;
+    time_till_drop          = 0.3f;
+    time_counter            = 0.0f;
 
-    newgamedown     = false;
-    newgameup       = false;
-    quitdown        = false;
-    quitup          = false;
+    newgamedown             = false;
+    newgameup               = false;
+    quitdown                = false;
+    quitup                  = false;
 
-    newgamex1       = GAME_OFFSET+board->WINDOW_WIDTH+board->WTH_PER_BLOCK;
-    newgamex2       = GAME_OFFSET+board->WINDOW_WIDTH+8*board->WTH_PER_BLOCK;
-    newgamey1       = board->WINDOW_HEIGHT-4*board->HEI_PER_BLOCK;
-    newgamey2       = board->WINDOW_HEIGHT-6*board->HEI_PER_BLOCK;
+    newgamex1               = GAME_OFFSET+board->WINDOW_WIDTH+board->WTH_PER_BLOCK;
+    newgamex2               = GAME_OFFSET+board->WINDOW_WIDTH+8*board->WTH_PER_BLOCK;
+    newgamey1               = board->WINDOW_HEIGHT-4*board->HEI_PER_BLOCK;
+    newgamey2               = board->WINDOW_HEIGHT-6*board->HEI_PER_BLOCK;
 
     //游戏状态
     paused          = false;
@@ -215,8 +218,11 @@ void PlayState::input(GameEngine* game){
                          y < newgamey1 + 4*board->HEI_PER_BLOCK){
                     //光标置于"QUIT"位置
                     quitup = true; } } break; }
-            default: break; } }
-}}
+            default: break;
+            }
+        }
+    }
+}
 
 void PlayState::releaseBlocks(){
     Tetris* new_tetris = new Tetris(rand()%7);
@@ -314,6 +320,9 @@ void PlayState::render(GameEngine* game){
     SDL_SetRenderDrawColor(game->renderer, 0, 1, 0, 1);
     SDL_RenderClear(game->renderer);
 
+    SDL_SetTextureAlphaMod(background_texture, 100);
+    renderTexture(background_texture, game->renderer, 0, 0);
+
     //渲染 "TETRIS" 文字
     int x = (next_tetris->x-3) * board->WTH_PER_BLOCK;
     int y = GAME_OFFSET;
@@ -386,14 +395,14 @@ void PlayState::render(GameEngine* game){
 
     SDL_SetRenderDrawColor(game->renderer, 180, 180, 180, 255);
 
-    //方块池右边缘
-    SDL_RenderDrawLine(game->renderer,
-                       GAME_OFFSET, GAME_OFFSET,
-                       GAME_OFFSET, GAME_OFFSET + board->WINDOW_HEIGHT);
     //方块池左边缘
     SDL_RenderDrawLine(game->renderer,
+                       GAME_OFFSET, GAME_OFFSET,
+                       GAME_OFFSET, GAME_OFFSET+board->WINDOW_HEIGHT);
+    //方块池右边缘
+    SDL_RenderDrawLine(game->renderer,
                        GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET,
-                       GAME_OFFSET+board->WINDOW_HEIGHT, GAME_OFFSET+board->WINDOW_HEIGHT);
+                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET+board->WINDOW_HEIGHT);
 
     //方块池顶边缘
     SDL_RenderDrawLine(game->renderer,
@@ -410,24 +419,24 @@ void PlayState::render(GameEngine* game){
                       game->renderer, newgamex1,
                       game->height-newgamey1+4*board->WTH_PER_BLOCK);
 
-    //"NEW GAME" 按钮框
-    int blue[4] = {0, 0, 255, 255};
-    createButton(game, newgamex1, newgamey2,
-                 7*board->WINDOW_WIDTH, 2*board->WINDOW_HEIGHT, blue);
+    ////"NEW GAME" 按钮框
+    //int blue[4] = {0, 0, 255, 255};
+    //createButton(game, newgamex1, newgamey2,
+                 //7*board->WINDOW_WIDTH, 2*board->WINDOW_HEIGHT, blue);
 
-    //渲染"NEW GAME"文字
-    renderTexture(font_image_new_game,
-                  game->renderer, newgamex1+10, newgamey2+10);
+    ////渲染"NEW GAME"文字
+    //renderTexture(font_image_new_game,
+                  //game->renderer, newgamex1+10, newgamey2+10);
 
-    //"QUIT" 按钮框
-    int red[4] = {255, 0, 0, 255};
-    createButton(game, newgamex1,
-                 newgamey2 + 4*board->HEI_PER_BLOCK, 7*board->WTH_PER_BLOCK,
-                 2*board->HEI_PER_BLOCK, red);
+    ////"QUIT" 按钮框
+    //int red[4] = {255, 0, 0, 255};
+    //createButton(game, newgamex1,
+                 //newgamey2 + 4*board->HEI_PER_BLOCK, 7*board->WTH_PER_BLOCK,
+                 //2*board->HEI_PER_BLOCK, red);
 
-    //渲染"QUIT"文字
-    renderTexture(font_image_quit,
-                  game->renderer, newgamex1+10, newgamey2+4*board->HEI_PER_BLOCK+10);
+    ////渲染"QUIT"文字
+    //renderTexture(font_image_quit,
+                  //game->renderer, newgamex1+10, newgamey2+4*board->HEI_PER_BLOCK+10);
 
     //显示内容
     SDL_RenderPresent(game->renderer);

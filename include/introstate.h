@@ -21,7 +21,7 @@ public:
 
     static IntroState* Instance(){ return &m_introstate; }
 
-    void render_logo(GameEngine* game);
+    void render_logo(GameEngine* game, int i);
 
 protected:
     IntroState(){}
@@ -32,9 +32,10 @@ private:
     bool exit;
 
     //LOGO
+    SDL_Texture* logoa[21];
     SDL_Texture* logo;
-    int alpha;
-    enum Status {FADE_IN, REMAIN, FADE_OUT};
-    Status logo_status;
+    //int alpha;
+    //enum Status {FADE_IN, REMAIN, FADE_OUT};
+    //Status logo_status;
 };
 #endif

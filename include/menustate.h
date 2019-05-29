@@ -1,5 +1,5 @@
-#ifndef SRC_MENUSTATE_H
-#define SRC_MENUSTATE_H
+#ifndef SRC_MENUSTATE_H_
+#define SRC_MENUSTATE_H_
 
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
@@ -42,9 +42,9 @@ private:
     SDL_Texture*        font_image_quit;
 
     //文字位置
-    int title_width , title_height;
-    int play_width  , play_height;
-    int quit_width  , quit_height;
+    int title_width,    title_height;
+    int play_width ,    play_height;
+    int quit_width ,    quit_height;
 
     int currently_selected;
 

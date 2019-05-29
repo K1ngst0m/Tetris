@@ -1,6 +1,6 @@
 #include"menustate.h"
 #include"playstate.h"
-#include"utilities.h"
+#include"reuse.h"
 
 MenuState MenuState::m_menustate;
 

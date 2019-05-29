@@ -1,4 +1,4 @@
-#include"tetromino.h"
+#include"tetris.h"
 #include"board.h"
 
 const int Tetris::block_table[7][4][2] = {

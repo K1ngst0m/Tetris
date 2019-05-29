@@ -33,7 +33,7 @@ private:
 
     //LOGO
     SDL_Texture* logoa[21];
-    SDL_Texture* logo;
+    //SDL_Texture* logo;
     //int alpha;
     //enum Status {FADE_IN, REMAIN, FADE_OUT};
     //Status logo_status;

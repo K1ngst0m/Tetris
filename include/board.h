@@ -2,7 +2,7 @@
 #define SRC_BOARD_H_
 
 
-#include"tetromino.h"
+#include"tetris.h"
 class Board{ //方块池/游戏边界
 public:
     static const int WINDOW_WIDTH = 300;//宽度

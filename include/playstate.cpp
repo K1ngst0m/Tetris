@@ -2,9 +2,9 @@
 
 
 #include"game_engine.h"
-#include"tetromino.h"
+#include"tetris.h"
 #include"board.h"
-#include"utilities.h"
+#include"reuse.h"
 
 PlayState PlayState::m_playstate;
 

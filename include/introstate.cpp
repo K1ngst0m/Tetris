@@ -1,6 +1,6 @@
 #include"introstate.h"
 #include"menustate.h"
-#include"utilities.h"
+#include"reuse.h"
 
 IntroState IntroState::m_introstate;
 

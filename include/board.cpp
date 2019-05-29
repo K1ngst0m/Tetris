@@ -1,6 +1,6 @@
 
 #include"board.h"
-#include"tetromino.h"
+#include"tetris.h"
 
 Board::Board(){
     score = 0;

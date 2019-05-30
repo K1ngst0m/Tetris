@@ -7,6 +7,7 @@
 #include"reuse.h"
 
 PlayState PlayState::m_playstate;
+static bool lose_music = false;
 
 
 void PlayState::init(GameEngine* game){
@@ -24,6 +25,9 @@ void PlayState::init(GameEngine* game){
     //声音引擎加载
     music_engine            = irrklang::createIrrKlangDevice();
     music_engine            ->play2D("resource/sounds/bgm.ogg", true);
+    music_engine            ->setSoundVolume(0.4);
+    sound_engine            = irrklang::createIrrKlangDevice();
+    lose_engine             = irrklang::createIrrKlangDevice();
 
     //字体载入
     TTF_Init();
@@ -71,6 +75,8 @@ void PlayState::init(GameEngine* game){
 
 void PlayState::clean_up(GameEngine* game){
     music_engine->drop();
+    sound_engine->drop();
+    lose_engine->drop();
 
     TTF_CloseFont(font_tetris);
     TTF_CloseFont(font_score);
@@ -83,6 +89,7 @@ void PlayState::clean_up(GameEngine* game){
     SDL_DestroyTexture(font_image_score_text);
     SDL_DestroyTexture(font_image_score);
     SDL_DestroyTexture(font_image_game_over);
+    SDL_DestroyTexture(background_texture);
 
     IMG_Quit();
 
@@ -119,12 +126,16 @@ void PlayState::reset(){
     tetris->setPoint(static_cast<int>(board->COLS/2), 0);
     next_tetris->setPoint(board->COLS+5, static_cast<int>(0.3*board->ROWS));
 
+    //音频重置
     music_engine->stopAllSounds();
     music_engine->play2D("resource/sounds/bgm.ogg", true);
+    music_engine            ->setSoundVolume(0.4);
 
+    //游戏状态重置
     game_over            = false;
     newgameup            = false;
     newgamedown          = false;
+    lose_music           = false;
 
     paused = false;
 
@@ -312,7 +323,16 @@ void PlayState::update(GameEngine* game){
             }
         }
     }
-    board->letItGo();
+    int bonus;
+    bonus = board->letItGo();
+    switch (bonus){
+    case(0): sound_engine->play2D("resource/sounds/1.ogg", false);break;
+    case(1): sound_engine->play2D("resource/sounds/2.ogg", false);break;
+    case(2): sound_engine->play2D("resource/sounds/3.ogg", false);break;
+    case(3): sound_engine->play2D("resource/sounds/4.ogg", false);break;
+    case(-1):break;
+    }
+
     tetris->rotate = false;
     tetris->shift = false;
     tetris->movement = tetris->NONE;
@@ -417,9 +437,18 @@ void PlayState::render(GameEngine* game){
                        GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET+board->WINDOW_HEIGHT);
 
     if (game_over)
+    {
+        if(!lose_music)
+        {
+            lose_engine ->play2D("resource/sounds/lose.ogg");
+            lose_music  = true;
+        }
+
+        music_engine->setAllSoundsPaused(true);
         renderTexture(font_image_game_over,
                       game->renderer, newgamex1,
                       game->height-newgamey1+4*board->WTH_PER_BLOCK);
+    }
 
     //显示内容
     SDL_RenderPresent(game->renderer);

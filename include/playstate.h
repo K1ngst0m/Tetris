@@ -49,6 +49,8 @@ private:
 
     //Music
     irrklang::ISoundEngine* music_engine;
+    irrklang::ISoundEngine* sound_engine;
+    irrklang::ISoundEngine* lose_engine;
 
     //Fonts
     SDL_Color   white;

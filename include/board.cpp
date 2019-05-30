@@ -22,7 +22,7 @@ void Board::cleanPerRows(int i){
             color[row][col] = color[row-1][col];
 }
 
-void Board::letItGo(){
+int Board::letItGo(){
     int bouns_counter = 0;
     for(int row = ROWS-1; row >= 0; row--){
         if(!judgeFull(row))
@@ -35,9 +35,13 @@ void Board::letItGo(){
         bouns_counter++;
         render_score = true;
     }
-
-    if(bouns_counter == 4)
-        add_score(BONUS);
+    switch(bouns_counter){
+    case(1):return 0;break;
+    case(2):add_score(1);return 1;break;
+    case(3):add_score(2);return 2;break;
+    case(4):add_score(3);return 3;break;
+    }
+    return -1;
 }
 
 bool Board::add(Tetris* block){

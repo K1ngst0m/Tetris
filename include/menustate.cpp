@@ -43,6 +43,7 @@ void MenuState::clean_up(GameEngine* game){
     SDL_DestroyTexture(font_image_title);
     SDL_DestroyTexture(font_image_play);
     SDL_DestroyTexture(font_image_quit);
+    SDL_DestroyTexture(background);
 
     IMG_Quit();
 }

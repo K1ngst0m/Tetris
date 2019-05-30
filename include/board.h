@@ -20,10 +20,10 @@ public:
 
     Board();                   //方块池初始化: 分数=0, 方块池清空
 
-    void add_score(int add){score += add;}
-    int getScore(){return score;}               //获取分数
+    void add_score(int add){score += add;}      //累加分数
+    int getScore(){return score;}               //获取分数, 渲染字体用
     void letItGo();                             //消除且计分
-    bool add(Tetris* block);               //方块堆叠
+    bool add(Tetris* block);                    //方块堆叠
 
 private:
     int score;

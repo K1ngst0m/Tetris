@@ -11,6 +11,7 @@ void MenuState::init(GameEngine* game){
     TTF_Init();
     white = {255, 255, 255};
 
+    background  = loadTexture("resource/img/menu.png", game->renderer);
     font_title  = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 60);
     font_play   = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
     font_quit   = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
@@ -89,6 +90,7 @@ void MenuState::render(GameEngine* game){
     int height, width;
     int space = 30;
 
+    renderTexture(background, game->renderer, 0, 0);
     SDL_QueryTexture(font_image_title, nullptr, nullptr, &width, &height);
     renderTexture(font_image_title, game->renderer,
                    (game->width- title_width) / 2,

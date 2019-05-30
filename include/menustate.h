@@ -33,6 +33,8 @@ private:
     bool play;
     bool exit;
 
+    SDL_Texture*        background;
+
     SDL_Color           white;
     TTF_Font*           font_title;
     TTF_Font*           font_play;

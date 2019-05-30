@@ -21,6 +21,10 @@ void PlayState::init(GameEngine* game){
     //背景加载
     background_texture      = loadTexture("resource/img/bg.png", game->renderer);
 
+    //声音引擎加载
+    music_engine            = irrklang::createIrrKlangDevice();
+    music_engine            ->play2D("resource/sounds/bgm.ogg", true);
+
     //字体载入
     TTF_Init();
     white                   = {255, 255, 255};
@@ -28,18 +32,18 @@ void PlayState::init(GameEngine* game){
     font_score_text         = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
     font_score              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 20);
 
-    //font_new_game           = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
     font_pause              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 16);
     font_game_over          = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
     //font_quit               = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    //font_new_game           = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
 
-    //font_image_new_game     = renderText("NEW GAME" , white, font_new_game  , game->renderer);
     font_image_pause        = renderText("PAUSE"    , white, font_pause     , game->renderer);
-    //font_image_quit         = renderText("QUIT"     , white, font_quit      , game->renderer);
     font_image_game_over    = renderText("GAME OVER", white, font_game_over , game->renderer);
     font_image_tetris       = renderText("TETRIS"   , white, font_tetris    , game->renderer);
     font_image_score_text   = renderText("SCORE"  , white, font_score_text, game->renderer);
     font_image_score        = renderText(std::to_string(board->getScore())  , white, font_score, game->renderer);
+    //font_image_quit         = renderText("QUIT"     , white, font_quit      , game->renderer);
+    //font_image_new_game     = renderText("NEW GAME" , white, font_new_game  , game->renderer);
 
     acceleration            = 0.005f;
     this_time               = 0;
@@ -70,22 +74,23 @@ void PlayState::init(GameEngine* game){
 
 
 void PlayState::clean_up(GameEngine* game){
+    music_engine->drop();
 
     TTF_CloseFont(font_tetris);
     TTF_CloseFont(font_score);
     TTF_CloseFont(font_score_text);
-    TTF_CloseFont(font_new_game);
     TTF_CloseFont(font_pause);
     TTF_CloseFont(font_game_over);
-    TTF_CloseFont(font_quit);
+    //TTF_CloseFont(font_quit);
+    //TTF_CloseFont(font_new_game);
 
     SDL_DestroyTexture(font_image_pause);
     SDL_DestroyTexture(font_image_tetris);
     SDL_DestroyTexture(font_image_score_text);
     SDL_DestroyTexture(font_image_score);
-    SDL_DestroyTexture(font_image_new_game);
-    SDL_DestroyTexture(font_image_quit);
     SDL_DestroyTexture(font_image_game_over);
+    //SDL_DestroyTexture(font_image_new_game);
+    //SDL_DestroyTexture(font_image_quit);
 
     IMG_Quit();
 
@@ -95,10 +100,12 @@ void PlayState::clean_up(GameEngine* game){
 }
 
 void PlayState::pause(){
+    music_engine->setAllSoundsPaused(true);
     paused = true;
 }
 
 void PlayState::resume(){
+    music_engine->setAllSoundsPaused(false);
     paused = false;
 }
 
@@ -119,6 +126,9 @@ void PlayState::reset(){
 
     tetris->setPoint(static_cast<int>(board->COLS/2), 0);
     next_tetris->setPoint(board->COLS+5, static_cast<int>(0.3*board->ROWS));
+
+    music_engine->stopAllSounds();
+    music_engine->play2D("resource/sounds/bgm.ogg", true);
 
     game_over            = false;
     newgameup            = false;

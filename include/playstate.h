@@ -4,20 +4,20 @@
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 #include<SDL2/SDL_image.h>
+#include"reuse.h"
 
 #include"gamestate.h"
+#include"../irrKlang-64bit-1.5.0/include/irrKlang.h"
 
 class Tetris;
 class Board;
 
 class PlayState : public GameState{
 public:
-    //static const int NOLORS = 7;
-
-    static const int GAME_OFFSET = 20;
+    static const int GAME_OFFSET = 20;  //方块池与窗口距离
 
     void init(GameEngine* game);        //系统初始化
-    void clean_up(GameEngine *game);     //清理内存
+    void clean_up(GameEngine *game);    //清理内存
 
     void reset();
     void resume();
@@ -49,26 +49,27 @@ private:
     SDL_Texture* block_texture;
     SDL_Texture* background_texture;
 
+    //Music
+    irrklang::ISoundEngine* music_engine;
+
     //Fonts
     SDL_Color   white;
     TTF_Font*   font_pause;     //暂停时显示
     TTF_Font*   font_tetris;    //
     TTF_Font*   font_score_text;//
     TTF_Font*   font_score;     //
-
-        //游戏结束显示
-    TTF_Font*   font_new_game;
-    TTF_Font*   font_quit;
     TTF_Font*   font_game_over;
+    //TTF_Font*   font_new_game;
+    //TTF_Font*   font_quit;
 
     //Fonts-->texture
     SDL_Texture* font_image_pause;
     SDL_Texture* font_image_tetris;
     SDL_Texture* font_image_score_text;
     SDL_Texture* font_image_score;
-    SDL_Texture* font_image_new_game;
-    SDL_Texture* font_image_quit;
     SDL_Texture* font_image_game_over;
+    //SDL_Texture* font_image_new_game;
+    //SDL_Texture* font_image_quit;
 
     //帧相关
     float   acceleration;

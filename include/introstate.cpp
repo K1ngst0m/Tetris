@@ -58,7 +58,6 @@ void IntroState::input(GameEngine* game){
 void IntroState::update(GameEngine* game){
     if(exit) game->quit();
 
-
     //if(alpha == 0) game->push_state(MenuState::Instance());
 }
 

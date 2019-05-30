@@ -1,17 +1,27 @@
 # C++实训: 俄罗斯方块
 
+## 安装方法
+### Linux:
+```bash
+git clone https://github.com/npchitman/tetris
+cd tetris
+make
+```
+### Windows:
+
+
 ## 开发环境及依赖
 * linux
-* SDL2
+* 第三方库:SDL2
     * SDL_ttf
     * SDL_image
-* irrklang
+* 声音引擎:irrklang
 
 ## 开发工具
 * 文本编辑器: vim
-* 编译器: clang++
-* 图片制作处理: sai2, photoshop
-* 声音制作处理: flstudio
+* 编译器: g++
+* 图片处理: sai2, photoshop
+* 声音处理: flstudio
 
 ## 开发内容
 * 游戏引擎
@@ -30,6 +40,6 @@
     * 方块消除判定
     * 得分判定
     * 游戏结束判定
-* 声音(可选)
+* 声音
     * 音效
     * 背景音乐

@@ -56,8 +56,6 @@ private:
     TTF_Font*   font_score_text;//
     TTF_Font*   font_score;     //
     TTF_Font*   font_game_over;
-    //TTF_Font*   font_new_game;
-    //TTF_Font*   font_quit;
 
     //Fonts-->texture
     SDL_Texture* font_image_pause;
@@ -65,8 +63,6 @@ private:
     SDL_Texture* font_image_score_text;
     SDL_Texture* font_image_score;
     SDL_Texture* font_image_game_over;
-    //SDL_Texture* font_image_new_game;
-    //SDL_Texture* font_image_quit;
 
     //帧相关
     float   acceleration;

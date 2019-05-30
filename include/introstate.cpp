@@ -5,6 +5,7 @@
 IntroState IntroState::m_introstate;
 
 void IntroState::init(GameEngine* game){
+    timi_engine  = irrklang::createIrrKlangDevice();
     logoa[0]     = loadTexture("resource/img/animations/logo1.jpg", game->renderer);
     logoa[1]     = loadTexture("resource/img/animations/logo2.jpg", game->renderer);
     logoa[2]     = loadTexture("resource/img/animations/logo3.jpg", game->renderer);
@@ -29,7 +30,9 @@ void IntroState::init(GameEngine* game){
     exit = false;
 }
 
-void IntroState::clean_up(GameEngine* game){ IMG_Quit(); }
+void IntroState::clean_up(GameEngine* game){
+    timi_engine->drop();
+    IMG_Quit(); }
 
 void IntroState::input(GameEngine* game){
     SDL_Event event;
@@ -54,7 +57,9 @@ void IntroState::render(GameEngine* game){
     SDL_SetRenderDrawColor(game->renderer, 0, 0, 0, 1);
     for(int i = 0; i < 21; i++)
     {
+        if(i == 5) timi_engine->play2D("resource/sounds/timi.ogg");
         if(i == 11) SDL_Delay(1700);
+
         SDL_RenderClear(game->renderer);
 
         render_logo(game, i);

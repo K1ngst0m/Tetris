@@ -14,6 +14,7 @@ void MenuState::init(GameEngine* game){
     music_engine        = irrklang::createIrrKlangDevice();
     music_engine        ->play2D("resource/sounds/bgmmenu.ogg", true);
     music_engine        ->setSoundVolume(0.5);
+    select_engine       = irrklang::createIrrKlangDevice();
 
     background          = loadTexture("resource/img/menu.png", game->renderer);
     font_title          = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 60);
@@ -34,6 +35,7 @@ void MenuState::init(GameEngine* game){
 }
 
 void MenuState::clean_up(GameEngine* game){
+    select_engine->drop();
     music_engine->drop();
     //字体清理
     TTF_CloseFont(font_title);
@@ -79,9 +81,11 @@ void MenuState::input(GameEngine* game){
 
 void MenuState::update(GameEngine* game){
     if(play){
+        select_engine->play2D("resource/sounds/select.ogg");
         game->push_state(PlayState::Instance());
         music_engine->drop();
     }else if (exit){
+        select_engine->play2D("resource/sounds/select.ogg");
         game->quit();
     }
 }

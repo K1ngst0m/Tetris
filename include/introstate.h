@@ -4,6 +4,7 @@
 
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_image.h>
+#include<irrKlang.h>
 
 #include"gamestate.h"
 
@@ -29,6 +30,7 @@ protected:
 
 private:
     static IntroState m_introstate;
+    irrklang::ISoundEngine* timi_engine;
 
     bool exit;
 

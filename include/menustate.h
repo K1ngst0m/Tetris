@@ -41,6 +41,7 @@ private:
 
     //背景音乐
     irrklang::ISoundEngine* music_engine;
+    irrklang::ISoundEngine* select_engine;
 
     //字体渲染
     SDL_Color           white;

@@ -47,10 +47,6 @@ void MenuState::clean_up(GameEngine* game){
     IMG_Quit();
 }
 
-void MenuState::pause(){}
-void MenuState::resume(){}
-void MenuState::reset(){}
-
 void MenuState::input(GameEngine* game){
     SDL_Event event;
     while(SDL_PollEvent(&event)){

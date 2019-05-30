@@ -31,12 +31,6 @@ void IntroState::init(GameEngine* game){
 
 void IntroState::clean_up(GameEngine* game){ IMG_Quit(); }
 
-void IntroState::pause(){}
-
-void IntroState::resume(){}
-
-void IntroState::reset(){}
-
 void IntroState::input(GameEngine* game){
     SDL_Event event;
     while(SDL_PollEvent(&event)){

@@ -1,3 +1,4 @@
+//游玩界面
 #ifndef SRC_PLAYSTATE_H_
 #define SRC_PLAYSTATE_H_
 
@@ -23,7 +24,7 @@ public:
     void resume();
     void pause();
 
-    void input(GameEngine* game);       //设置键盘, 鼠标, 窗口事件
+    void input(GameEngine* game);       //设置键盘, 鼠标, 窗口事件和按键映射
     void update(GameEngine* game);      //事件更新
     void render(GameEngine* game);      //渲染结果
 
@@ -36,7 +37,7 @@ private:
 
     void releaseBlocks(); //下落一个新砖块
     void drawBlock(GameEngine* game, int x, int y, int k, SDL_Rect clips[]); //抽取方块
-    float frame_rate(GameEngine* game, int *last_time, int *this_time);
+    float frame_rate(GameEngine* game, int *last_time, int *this_time);     //帧数相关
 
     Board* board;
     Tetris* tetris;
@@ -78,7 +79,7 @@ private:
     bool    quitdown;      //按下退出键
     bool    quitup;        //松开退出键
 
-    //选项坐标
+    //按钮位置判定
     int     newgamex1;
     int     newgamex2;
     int     newgamey1;

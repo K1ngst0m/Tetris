@@ -1,3 +1,4 @@
+//菜单界面, 选择进入游戏或者退出
 #ifndef SRC_MENUSTATE_H_
 #define SRC_MENUSTATE_H_
 
@@ -9,21 +10,21 @@
 
 class MenuState: public GameState{
 public:
-    void init(GameEngine* game);
-    void clean_up(GameEngine* game);
+    void init(GameEngine* game);                        //初始化, 显示图片和字体, 播放音乐
+    void clean_up(GameEngine* game);                    //清理内存
 
-    void pause();
-    void resume();
-    void reset();
+    void pause(){}                                      //暂停(未使用)
+    void resume(){}                                     //继续(未使用)
+    void reset(){}                                      //重置(未使用)
 
-    void input(GameEngine* game);
-    void update(GameEngine* game);
-    void render(GameEngine* game);
+    void input(GameEngine* game);                       //菜单选择操作等
+    void update(GameEngine* game);                      //对操作进行更新
+    void render(GameEngine* game);                      //渲染背景图片, 标题, 选项字体, 显示画面
 
-    void select_up();
-    void select_down();
+    void select_up();                                   //向上选择
+    void select_down();                                 //向下选择
 
-    static MenuState* Instance() {return &m_menustate;}
+    static MenuState* Instance() {return &m_menustate;} //界面选择用
 
 protected:
     MenuState(){}
@@ -31,13 +32,17 @@ protected:
 private:
     static MenuState m_menustate;
 
+    //游玩与退出选项
     bool play;
     bool exit;
 
+    //背景图片
     SDL_Texture*        background;
 
+    //背景音乐
     irrklang::ISoundEngine* music_engine;
 
+    //字体渲染
     SDL_Color           white;
     TTF_Font*           font_title;
     TTF_Font*           font_play;
@@ -50,6 +55,7 @@ private:
     int title_width,    title_height;
     int play_width ,    play_height;
     int quit_width ,    quit_height;
+
 
     int currently_selected;
 

@@ -7,7 +7,7 @@ class GameState{
 public:
     //游戏界面功能
     virtual void init(GameEngine *game) = 0;        //启动游戏
-    virtual void clean_up(GameEngine *game) = 0;     //清理游戏内存
+    virtual void clean_up(GameEngine *game) = 0;    //清理游戏内存
 
     virtual void pause() = 0;                       //暂停
     virtual void resume() = 0;                      //继续

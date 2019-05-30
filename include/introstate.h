@@ -1,3 +1,4 @@
+//初始界面, 显示logo后进入菜单界面
 #ifndef SRC_INTORSTATE_H
 #define SRC_INTORSTATE_H
 
@@ -8,20 +9,20 @@
 
 class IntroState: public GameState{
 public:
-    void init(GameEngine* game);
-    void clean_up(GameEngine* game);
+    void init(GameEngine* game);                            //初始化初始界面
+    void clean_up(GameEngine* game);                        //清理内存
 
-    void pause();
-    void resume();
-    void reset();
+    void pause(){}                                          //暂停(未使用)
+    void resume(){}                                         //继续(未使用)
+    void reset(){}                                          //重置游戏(未使用)
 
-    void input(GameEngine* game);
-    void update(GameEngine* game);
-    void render(GameEngine* game);
+    void input(GameEngine* game);                           //窗口事件, 按键映射
+    void update(GameEngine* game);                          //事件更新
+    void render(GameEngine* game);                          //渲染图片, 显示画面
 
-    static IntroState* Instance(){ return &m_introstate; }
+    static IntroState* Instance(){ return &m_introstate; }  //切换界面用
 
-    void render_logo(GameEngine* game, int i);
+    void render_logo(GameEngine* game, int i);              //渲染logo
 
 protected:
     IntroState(){}
@@ -32,10 +33,6 @@ private:
     bool exit;
 
     //LOGO
-    SDL_Texture* logoa[21];
-    //SDL_Texture* logo;
-    //int alpha;
-    //enum Status {FADE_IN, REMAIN, FADE_OUT};
-    //Status logo_status;
+    SDL_Texture* logoa[21];                                 //存放一组图片,用来渲染logo动画
 };
 #endif

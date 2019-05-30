@@ -11,10 +11,14 @@ void MenuState::init(GameEngine* game){
     TTF_Init();
     white = {255, 255, 255};
 
-    background  = loadTexture("resource/img/menu.png", game->renderer);
-    font_title  = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 60);
-    font_play   = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
-    font_quit   = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
+    music_engine        = irrklang::createIrrKlangDevice();
+    music_engine        ->play2D("resource/sounds/bgmmenu.ogg", true);
+    music_engine        ->setSoundVolume(0.5);
+
+    background          = loadTexture("resource/img/menu.png", game->renderer);
+    font_title          = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 60);
+    font_play           = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
+    font_quit           = TTF_OpenFont("resource/fonts/MonsterFriendFore.otf", 20);
 
     font_image_title    = renderText("TETRIS", white, font_title, game->renderer);
     font_image_play     = renderText("PLAY"  , white, font_play , game->renderer);
@@ -30,6 +34,7 @@ void MenuState::init(GameEngine* game){
 }
 
 void MenuState::clean_up(GameEngine* game){
+    music_engine->drop();
     //字体清理
     TTF_CloseFont(font_title);
     TTF_CloseFont(font_play);
@@ -78,6 +83,7 @@ void MenuState::input(GameEngine* game){
 void MenuState::update(GameEngine* game){
     if(play){
         game->push_state(PlayState::Instance());
+        music_engine->drop();
     }else if (exit){
         game->quit();
     }

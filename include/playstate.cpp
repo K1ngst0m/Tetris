@@ -34,16 +34,12 @@ void PlayState::init(GameEngine* game){
 
     font_pause              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 16);
     font_game_over          = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
-    //font_quit               = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
-    //font_new_game           = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
 
     font_image_pause        = renderText("PAUSE"    , white, font_pause     , game->renderer);
     font_image_game_over    = renderText("GAME OVER", white, font_game_over , game->renderer);
     font_image_tetris       = renderText("TETRIS"   , white, font_tetris    , game->renderer);
     font_image_score_text   = renderText("SCORE"  , white, font_score_text, game->renderer);
     font_image_score        = renderText(std::to_string(board->getScore())  , white, font_score, game->renderer);
-    //font_image_quit         = renderText("QUIT"     , white, font_quit      , game->renderer);
-    //font_image_new_game     = renderText("NEW GAME" , white, font_new_game  , game->renderer);
 
     acceleration            = 0.005f;
     this_time               = 0;
@@ -81,16 +77,12 @@ void PlayState::clean_up(GameEngine* game){
     TTF_CloseFont(font_score_text);
     TTF_CloseFont(font_pause);
     TTF_CloseFont(font_game_over);
-    //TTF_CloseFont(font_quit);
-    //TTF_CloseFont(font_new_game);
 
     SDL_DestroyTexture(font_image_pause);
     SDL_DestroyTexture(font_image_tetris);
     SDL_DestroyTexture(font_image_score_text);
     SDL_DestroyTexture(font_image_score);
     SDL_DestroyTexture(font_image_game_over);
-    //SDL_DestroyTexture(font_image_new_game);
-    //SDL_DestroyTexture(font_image_quit);
 
     IMG_Quit();
 
@@ -429,37 +421,10 @@ void PlayState::render(GameEngine* game){
                       game->renderer, newgamex1,
                       game->height-newgamey1+4*board->WTH_PER_BLOCK);
 
-    ////"NEW GAME" 按钮框
-    //int blue[4] = {0, 0, 255, 255};
-    //createButton(game, newgamex1, newgamey2,
-                 //7*board->WINDOW_WIDTH, 2*board->WINDOW_HEIGHT, blue);
-
-    ////渲染"NEW GAME"文字
-    //renderTexture(font_image_new_game,
-                  //game->renderer, newgamex1+10, newgamey2+10);
-
-    ////"QUIT" 按钮框
-    //int red[4] = {255, 0, 0, 255};
-    //createButton(game, newgamex1,
-                 //newgamey2 + 4*board->HEI_PER_BLOCK, 7*board->WTH_PER_BLOCK,
-                 //2*board->HEI_PER_BLOCK, red);
-
-    ////渲染"QUIT"文字
-    //renderTexture(font_image_quit,
-                  //game->renderer, newgamex1+10, newgamey2+4*board->HEI_PER_BLOCK+10);
-
     //显示内容
     SDL_RenderPresent(game->renderer);
 }
 
-void PlayState::createButton(GameEngine* game,
-                             int x, int y,
-                             int width, int height, int color[]){
-    SDL_Rect rect = {x, y, width, height};
-    SDL_SetRenderDrawColor(game->renderer,
-                             color[0], color[1], color[2], color[3]);
-    SDL_RenderFillRect(game->renderer, &rect);
-}
 
 
 void PlayState::drawBlock(GameEngine* game,

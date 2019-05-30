@@ -5,8 +5,6 @@
 IntroState IntroState::m_introstate;
 
 void IntroState::init(GameEngine* game){
-    //logo = loadTexture("resource/img/logo1.png", game->renderer);
-
     logoa[0]     = loadTexture("resource/img/animations/logo1.jpg", game->renderer);
     logoa[1]     = loadTexture("resource/img/animations/logo2.jpg", game->renderer);
     logoa[2]     = loadTexture("resource/img/animations/logo3.jpg", game->renderer);
@@ -29,8 +27,6 @@ void IntroState::init(GameEngine* game){
     logoa[19]    = loadTexture("resource/img/animations/logo20.jpg", game->renderer);
     logoa[20]    = loadTexture("resource/img/animations/logo21.jpg", game->renderer);
     exit = false;
-    //alpha = 1;
-    //logo_status = FADE_IN;
 }
 
 void IntroState::clean_up(GameEngine* game){ IMG_Quit(); }
@@ -57,8 +53,6 @@ void IntroState::input(GameEngine* game){
 
 void IntroState::update(GameEngine* game){
     if(exit) game->quit();
-
-    //if(alpha == 0) game->push_state(MenuState::Instance());
 }
 
 void IntroState::render(GameEngine* game){
@@ -79,26 +73,6 @@ void IntroState::render(GameEngine* game){
 }
 
 void IntroState::render_logo(GameEngine* game, int i){
-    //if(logo_status == FADE_IN){
-        //alpha += 3;
-        //if(alpha >= 255){
-            //alpha = 255;
-            //logo_status = REMAIN;
-        //}
-    //}   else if(logo_status == REMAIN){
-        //SDL_Delay(2000);
-        //logo_status = FADE_OUT;
-    //}   else if(logo_status == FADE_OUT){
-        //alpha -= 3;
-        //if(alpha <= 0){
-            //alpha = 0;
-            //logo_status = FADE_IN;
-        //}
-    //}
-    //SDL_SetTextureAlphaMod(logoa[i], alpha);
-    //
-
-
     int logo_width, logo_height;
     SDL_QueryTexture(logoa[i], nullptr, nullptr, &logo_width, &logo_height);
     int x = game->width / 2 - logo_width / 2;

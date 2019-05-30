@@ -3,6 +3,7 @@
 
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
+#include<irrKlang.h>
 
 #include"gamestate.h"
 
@@ -34,6 +35,8 @@ private:
     bool exit;
 
     SDL_Texture*        background;
+
+    irrklang::ISoundEngine* music_engine;
 
     SDL_Color           white;
     TTF_Font*           font_title;

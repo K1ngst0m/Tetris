@@ -4,10 +4,10 @@
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_ttf.h>
 #include<SDL2/SDL_image.h>
-#include"reuse.h"
+#include<irrKlang.h>
 
+#include"reuse.h"
 #include"gamestate.h"
-#include"../irrKlang-64bit-1.5.0/include/irrKlang.h"
 
 class Tetris;
 class Board;
@@ -37,9 +37,6 @@ private:
     void releaseBlocks(); //下落一个新砖块
     void drawBlock(GameEngine* game, int x, int y, int k, SDL_Rect clips[]); //抽取方块
     float frame_rate(GameEngine* game, int *last_time, int *this_time);
-    void createButton(GameEngine* game,
-                       int x, int y,
-                       int width, int height, int color[]);
 
     Board* board;
     Tetris* tetris;

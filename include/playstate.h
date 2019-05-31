@@ -37,7 +37,7 @@ private:
 
     void releaseBlocks(); //下落一个新砖块
     void drawBlock(GameEngine* game, int x, int y, int k, SDL_Rect clips[]); //抽取方块
-    float frame_rate(GameEngine* game, int *last_time, int *this_time);     //帧数相关
+    float frame_rate(GameEngine* game, int *last_time, int *this_time);     //加速相关
 
     Board* board;
     Tetris* tetris;
@@ -54,10 +54,10 @@ private:
 
     //Fonts
     SDL_Color   white;
-    TTF_Font*   font_pause;     //暂停时显示
-    TTF_Font*   font_tetris;    //
-    TTF_Font*   font_score_text;//
-    TTF_Font*   font_score;     //
+    TTF_Font*   font_pause;
+    TTF_Font*   font_tetris;
+    TTF_Font*   font_score_text;
+    TTF_Font*   font_score;
     TTF_Font*   font_game_over;
 
     //Fonts-->texture

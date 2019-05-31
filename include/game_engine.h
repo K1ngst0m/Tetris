@@ -10,18 +10,19 @@ class GameEngine{
 public:
     GameEngine();                       //SDL初始化
 
-    void clean_up();                    //清理内存
+    void clean_up();                    //退出程序时清理内存
 
+    //栈操作
     void change_state(GameState* state);//更换界面
-    void push_state(GameState* state);  //
-    void pop_state();                   //
+    void push_state(GameState* state);  //增加一个游戏界面
+    void pop_state();                   //删除一个游戏界面
 
-    void execute();                     //启动引擎
-    void input();                       //输入
-    void update();
-    void render();                      //渲染界面
+    void execute();                     //保持下列操作启动
+    void input();                       //启动事件映射
+    void update();                      //启动事件更新
+    void render();                      //启动渲染界面
 
-    bool runnning(){return !exit;}      //
+    bool runnning(){return !exit;}
     void quit(){exit = true;}           //退出游戏(程序)
 
     //窗口长宽
@@ -34,9 +35,9 @@ public:
 
 private:
 
-    std::vector<GameState*> states;     //栈
+    std::vector<GameState*> states;     //栈结构,用来管理游戏界面运行, 切换, 清理内存
 
-    bool exit;
+    bool exit;                          //ture退出程序
 
 };
 #endif

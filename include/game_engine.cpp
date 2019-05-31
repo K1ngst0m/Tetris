@@ -1,12 +1,13 @@
-
+//游戏引擎类, 用栈数据结构来管理三个界面, 初始化游戏, 创建窗口
 #include"game_engine.h"
 #include"gamestate.h"
+#include<iostream>
 
 GameEngine::GameEngine(){
     SDL_Init(SDL_INIT_EVERYTHING);
-    //if(SDL_Init(SDL_INIT_EVERYTHING) == -1){
-        //std::cout << SDL_GetError() << std::endl;
-    //} //SDL启动
+    if(SDL_Init(SDL_INIT_EVERYTHING) == -1){
+        std::cout << SDL_GetError() << std::endl;
+    } //SDL启动
 
     //窗口长宽
     width = 500;
@@ -19,17 +20,18 @@ GameEngine::GameEngine(){
                               width,
                               height,
                               SDL_WINDOW_SHOWN);
-    //if (window == nullptr){ std::cout << SDL_GetError() << std::endl; }
+    if (window == nullptr){ std::cout << SDL_GetError() << std::endl; }
 
 
     //创建渲染器
     renderer = SDL_CreateRenderer(window, -1,
                                   SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    //if (renderer == nullptr){ std::cout << SDL_GetError() << std::endl; }
+    if (renderer == nullptr){ std::cout << SDL_GetError() << std::endl; }
 
     exit = false;
 }
 
+//管理游戏运行
 void GameEngine::execute(){
     while(!exit){
         input();

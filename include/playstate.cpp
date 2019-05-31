@@ -37,7 +37,7 @@ void PlayState::init(GameEngine* game){
     font_score              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 20);
 
     font_pause              = TTF_OpenFont("resource/fonts/DTM-Sans.otf", 16);
-    font_game_over          = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 20);
+    font_game_over          = TTF_OpenFont("resource/fonts/DTM-Mono.otf", 26);
 
     font_image_pause        = renderText("PAUSE"    , white, font_pause     , game->renderer);
     font_image_game_over    = renderText("GAME OVER", white, font_game_over , game->renderer);

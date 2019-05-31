@@ -128,13 +128,13 @@ void MenuState::render(GameEngine* game){
 }
 
 void MenuState::select_up(){
-    if(currently_selected > 0){
-        currently_selected = (currently_selected - 1) % items;
+    if(currently_selected == 1){
+        currently_selected = 0;
     }
 }
 
 void MenuState::select_down(){
-    if(currently_selected < items-1){
-        currently_selected = (currently_selected + 1) % items;
+    if(currently_selected == 0){
+        currently_selected = 1;
     }
 }

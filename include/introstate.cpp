@@ -57,16 +57,15 @@ void IntroState::render(GameEngine* game){
     SDL_SetRenderDrawColor(game->renderer, 0, 0, 0, 1);
     for(int i = 0; i < 21; i++)
     {
-        if(i == 5) timi_engine->play2D("resource/sounds/timi.ogg");
-        if(i == 11) SDL_Delay(1700);
+        if(i == 1) timi_engine->play2D("resource/sounds/timi.ogg");
+        if(i == 11) SDL_Delay(1900);
 
         SDL_RenderClear(game->renderer);
 
         render_logo(game, i);
 
-        //显示
         SDL_RenderPresent(game->renderer);
-        SDL_Delay(150);
+        SDL_Delay(135);
     }
     game->push_state(MenuState::Instance());
 }

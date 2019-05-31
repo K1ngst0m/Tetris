@@ -2,10 +2,11 @@
 
 ## 安装方法
 ### Linux:
+安装依赖项 libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev
 ```bash
-git clone https://github.com/npchitman/tetris
-cd tetris
-make
+$ git clone https://github.com/npchitman/tetris
+$ cd tetris
+$ make
 ```
 ### Windows:
 

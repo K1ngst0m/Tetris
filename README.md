@@ -7,7 +7,6 @@
 ![4](https://github.com/npchitman/tetris/blob/master/screenshot/4.png?raw=true)
 ![5](https://github.com/npchitman/tetris/blob/master/screenshot/5.png?raw=true)
 ![6](https://github.com/npchitman/tetris/blob/master/screenshot/6.png?raw=true)
-![7](https://github.com/npchitman/tetris/blob/master/screenshot/7.png?raw=true)
 ## 安装方法
 ### Linux:
 安装依赖项 libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev

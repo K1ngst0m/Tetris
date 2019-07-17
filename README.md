@@ -1,7 +1,7 @@
 # C++实训: 俄罗斯方块
 
 ## 游戏截图
-![1](https://github.com/npchitman/tetris/blob/master/screenshot/1.png?raw=true = 100×100)
+![1](https://github.com/npchitman/tetris/blob/master/screenshot/1.png?raw=true)
 ![2](https://github.com/npchitman/tetris/blob/master/screenshot/2.png?raw=true)
 ![3](https://github.com/npchitman/tetris/blob/master/screenshot/3.png?raw=true)
 ![4](https://github.com/npchitman/tetris/blob/master/screenshot/4.png?raw=true)

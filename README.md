@@ -1,12 +1,13 @@
 # C++实训: 俄罗斯方块
+|启动动画|开始菜单界面|
+|---|---|
+|![1](https://github.com/npchitman/tetris/blob/master/screenshot/1.png?raw=true) | ![2](https://github.com/npchitman/tetris/blob/master/screenshot/2.png?raw=true)|
 
-## 游戏截图
-![1](https://github.com/npchitman/tetris/blob/master/screenshot/1.png?raw=true)
-![2](https://github.com/npchitman/tetris/blob/master/screenshot/2.png?raw=true)
-![3](https://github.com/npchitman/tetris/blob/master/screenshot/3.png?raw=true)
-![4](https://github.com/npchitman/tetris/blob/master/screenshot/4.png?raw=true)
-![5](https://github.com/npchitman/tetris/blob/master/screenshot/5.png?raw=true)
-![6](https://github.com/npchitman/tetris/blob/master/screenshot/6.png?raw=true)
+
+|游玩界面|
+|---|---|
+|![3](https://github.com/npchitman/tetris/blob/master/screenshot/3.png?raw=true) |![4](https://github.com/npchitman/tetris/blob/master/screenshot/4.png?raw=true)|
+|![5](https://github.com/npchitman/tetris/blob/master/screenshot/5.png?raw=true)| ![6](https://github.com/npchitman/tetris/blob/master/screenshot/6.png?raw=true)|
 ## 安装方法
 ### Linux:
 安装依赖项 libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev
@@ -15,8 +16,6 @@ $ git clone https://github.com/npchitman/tetris
 $ cd tetris
 $ make
 ```
-### Windows:
-
 
 ## 开发环境及依赖
 * linux

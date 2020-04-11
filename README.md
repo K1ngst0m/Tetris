@@ -5,9 +5,9 @@
 |![1](https://github.com/npchitman/tetris/blob/master/screenshot/1.png?raw=true) | ![2](https://github.com/npchitman/tetris/blob/master/screenshot/2.png?raw=true)|
 
 
-|游玩界面|
+|游玩界面1|游玩界面2|游戏结束|游戏暂停|
 |---|---|---|---|
-|![3](https://github.com/npchitman/tetris/blob/master/screenshot/3.png?raw=true) |![4](https://github.com/npchitman/tetris/blob/master/screenshot/4.png?raw=true) |![5](https://github.com/npchitman/tetris/blob/master/screenshot/5.png?raw=true)| ![6](https://github.com/npchitman/tetris/blob/master/screenshot/6.png?raw=true)|
+|![3](https://github.com/npchitman/tetris/blob/master/screenshot/3.png?raw=true) | ![4](https://github.com/npchitman/tetris/blob/master/screenshot/4.png?raw=true) | ![5](https://github.com/npchitman/tetris/blob/master/screenshot/5.png?raw=true)| ![6](https://github.com/npchitman/tetris/blob/master/screenshot/6.png?raw=true)|
 
 ---
 

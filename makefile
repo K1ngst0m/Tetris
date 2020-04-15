@@ -1,5 +1,5 @@
 CXX        		:= clang++
-SRCS			:= $(wildcard include/*.cpp)
+SRCS			:= $(wildcard src/*.cpp)
 OBJS			:= $(SRCS:.cpp=.o)
 
 

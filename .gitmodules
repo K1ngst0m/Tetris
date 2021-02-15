@@ -1,0 +1,3 @@
+[submodule "irrKlang"]
+	path = irrKlang
+	url = https://github.com/npchitman/irrKlang

@@ -16,11 +16,11 @@ public:
     virtual void update(GameEngine *game) = 0;      //更新
     virtual void render(GameEngine *game) = 0;      //渲染
 
-    void change_state(GameEngine* game, GameState* state){
+    static void change_state(GameEngine* game, GameState* state){
         game->change_state(state);
     }
 
 protected:
-    GameState(){}
+    GameState()= default;
 };
 #endif

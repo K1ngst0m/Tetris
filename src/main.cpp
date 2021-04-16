@@ -1,6 +1,6 @@
 
-#include"game_engine.h"
-#include"introstate.h"
+#include"include/game_engine.h"
+#include"include/introstate.h"
 
 int main(int argc, char* argv[]){
     GameEngine game;                            //初始化游戏

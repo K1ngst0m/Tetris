@@ -1,10 +1,11 @@
-#include"playstate.h"
+#include"include/playstate.h"
 
 
-#include"game_engine.h"
-#include"tetris.h"
-#include"board.h"
-#include"reuse.h"
+#include"include/game_engine.h"
+#include"include/tetris.h"
+#include"include/board.h"
+#include"include/reuse.h"
+#include"random"
 
 PlayState PlayState::m_playstate;
 static bool lose_music = false;
@@ -13,8 +14,8 @@ static bool lose_music = false;
 void PlayState::init(GameEngine* game){
 
     board                   = new Board();
-    tetris                  = new Tetris(rand()%7);
-    next_tetris             = new Tetris(rand()%7);
+    tetris                  = new Tetris(static_cast<int>(random()%7));
+    next_tetris             = new Tetris(static_cast<int>(random()%7));
 
     //砖块材质加载
     block_texture           = loadTexture("resource/img/block1.bmp", game->renderer);
@@ -56,19 +57,19 @@ void PlayState::init(GameEngine* game){
     quitdown                = false;
     quitup                  = false;
 
-    newgamex1               = GAME_OFFSET+board->WINDOW_WIDTH+board->WTH_PER_BLOCK;
-    newgamex2               = GAME_OFFSET+board->WINDOW_WIDTH+8*board->WTH_PER_BLOCK;
-    newgamey1               = board->WINDOW_HEIGHT-4*board->HEI_PER_BLOCK;
-    newgamey2               = board->WINDOW_HEIGHT-6*board->HEI_PER_BLOCK;
+    newgamex1               = GAME_OFFSET+Board::WINDOW_WIDTH+Board::WTH_PER_BLOCK;
+    newgamex2               = GAME_OFFSET+Board::WINDOW_WIDTH+8*Board::WTH_PER_BLOCK;
+    newgamey1               = Board::WINDOW_HEIGHT-4*Board::HEI_PER_BLOCK;
+    newgamey2               = Board::WINDOW_HEIGHT-6*Board::HEI_PER_BLOCK;
 
     //游戏状态
     paused          = false;
     game_over       = false;
     exit            = false;
 
-    tetris->setPoint(static_cast<int>(board->COLS/2), 0);
+    tetris->setPoint(static_cast<int>(Board::COLS/2), 0);
 
-    next_tetris->setPoint(board->COLS+5, static_cast<int>(0.3*board->ROWS));
+    next_tetris->setPoint(Board::COLS+5, static_cast<int>(0.3*Board::ROWS));
 
 }
 
@@ -109,9 +110,9 @@ void PlayState::resume(){
 }
 
 void PlayState::reset(){
-    for(int i = 0; i < board->ROWS; i++)
-        for(int j = 0; j < board->COLS; j++)
-            board->color[i][j] = -1;
+    for(auto & i : board->color)
+        for(int & j : i)
+            j = -1;
 
     //删除旧有的对象
     delete [] board;
@@ -123,8 +124,8 @@ void PlayState::reset(){
     tetris = new Tetris(rand()%7);
     next_tetris = new Tetris(rand()%7);
 
-    tetris->setPoint(static_cast<int>(board->COLS/2), 0);
-    next_tetris->setPoint(board->COLS+5, static_cast<int>(0.3*board->ROWS));
+    tetris->setPoint(static_cast<int>(Board::COLS/2), 0);
+    next_tetris->setPoint(Board::COLS+5, static_cast<int>(0.3*Board::ROWS));
 
     //音频重置
     music_engine->stopAllSounds();
@@ -195,7 +196,7 @@ void PlayState::input(GameEngine* game){
         //鼠标移动事件
         if(event.type == SDL_MOUSEMOTION){
             //方块池外
-            if(event.motion.x > board->WINDOW_WIDTH + GAME_OFFSET)
+            if(event.motion.x > Board::WINDOW_WIDTH + GAME_OFFSET)
                 SDL_ShowCursor(1);      //显示光标(方块池外)
             //方块池内
             else
@@ -212,8 +213,8 @@ void PlayState::input(GameEngine* game){
                 if(y > newgamey2 && y < newgamey1)
                     //光标置于"NEW GAME" 位置
                     { newgamedown = true; }
-                else if (y > newgamey2 + 4*board->HEI_PER_BLOCK &&
-                         y < newgamey1 + 4*board->HEI_PER_BLOCK){
+                else if (y > newgamey2 + 4*Board::HEI_PER_BLOCK &&
+                         y < newgamey1 + 4*Board::HEI_PER_BLOCK){
                     //光标置于"QUIT"位置
                     quitdown = true; } } break; }
             default: break; } }
@@ -227,8 +228,8 @@ void PlayState::input(GameEngine* game){
                 if(y > newgamey2 && y < newgamey1)
                     //光标置于"NEW GAME" 位置
                     newgameup = true;
-                else if (y > newgamey2 + 4*board->HEI_PER_BLOCK &&
-                         y < newgamey1 + 4*board->HEI_PER_BLOCK){
+                else if (y > newgamey2 + 4*Board::HEI_PER_BLOCK &&
+                         y < newgamey1 + 4*Board::HEI_PER_BLOCK){
                     //光标置于"QUIT"位置
                     quitup = true; } } break; }
             default: break;
@@ -238,12 +239,12 @@ void PlayState::input(GameEngine* game){
 }
 
 void PlayState::releaseBlocks(){
-    Tetris* new_tetris = new Tetris(rand()%7);
+    auto* new_tetris = new Tetris(rand()%7);
     new_tetris->setPoint(next_tetris->x, next_tetris->y);
 
     delete[] tetris;
     tetris = next_tetris;
-    tetris->setPoint(static_cast<int>(board->COLS/2), 0);
+    tetris->setPoint(static_cast<int>(Board::COLS/2), 0);
 
     next_tetris = new_tetris;
 
@@ -276,11 +277,7 @@ void PlayState::update(GameEngine* game){
             tetris->rotateLeft();
         tetris->add_to_x(tetris->movement);
 
-        if(tetris->speedup){
-            time_till_drop = 0.02f;
-        }else{
-            time_till_drop = 0.3f - board->getScore()*acceleration;
-        }
+        time_till_drop = tetris->speedup ? 0.02f : 0.3f - board->getScore() * acceleration;
 
         time_counter += frame_rate(game, &last_time, &this_time);
 
@@ -290,11 +287,11 @@ void PlayState::update(GameEngine* game){
         }
     }
 
-    for(int i = 0; i < tetris->SIZE; i++){
+    for(int i = 0; i < Tetris::SIZE; i++){
         int x = tetris->getX(i);
         int y = tetris->getY(i);
 
-        if(x < 0 || x >= board->COLS){
+        if(x < 0 || x >= Board::COLS){
             if(tetris->rotate)
                 tetris->rotateRight();
 
@@ -302,10 +299,10 @@ void PlayState::update(GameEngine* game){
                 tetris->x -= tetris->movement;
             break;
 
-        }else if(y >= board->ROWS){
+        }else if(y >= Board::ROWS){
             tetris->lands();
 
-            tetris->setY(i, board->ROWS-1);
+            tetris->setY(i, Board::ROWS-1);
         }else if(y >= 0){
             if(board->color[y][x] != -1){
                 if(tetris->rotate || tetris->shift){
@@ -326,11 +323,11 @@ void PlayState::update(GameEngine* game){
     int bonus;
     bonus = board->letItGo();
     switch (bonus){
-    case(0): sound_engine->play2D("resource/sounds/1.ogg", false);break;
-    case(1): sound_engine->play2D("resource/sounds/2.ogg", false);break;
-    case(2): sound_engine->play2D("resource/sounds/3.ogg", false);break;
-    case(3): sound_engine->play2D("resource/sounds/4.ogg", false);break;
-    case(-1):break;
+        case(0): sound_engine->play2D("resource/sounds/1.ogg", false);break;
+        case(1): sound_engine->play2D("resource/sounds/2.ogg", false);break;
+        case(2): sound_engine->play2D("resource/sounds/3.ogg", false);break;
+        case(3): sound_engine->play2D("resource/sounds/4.ogg", false);break;
+        case(-1):break;
     }
 
     tetris->rotate = false;
@@ -346,7 +343,7 @@ void PlayState::render(GameEngine* game){
     renderTexture(background_texture, game->renderer, 0, 0);
 
     //渲染 "TETRIS" 文字
-    int x = (next_tetris->x-3) * board->WTH_PER_BLOCK;
+    int x = (next_tetris->x-3) * Board::WTH_PER_BLOCK;
     int y = GAME_OFFSET;
 
     renderTexture(font_image_tetris, game->renderer, x, y);
@@ -354,7 +351,7 @@ void PlayState::render(GameEngine* game){
     if(paused)
         renderTexture(font_image_pause, game->renderer, x, y+40);
     //渲染"SCORE"文字
-    renderTexture(font_image_score_text, game->renderer, x, y + board->WTH_PER_BLOCK);
+    renderTexture(font_image_score_text, game->renderer, x, y + Board::WTH_PER_BLOCK);
     //渲染分数
     if(board->render_score){
         font_image_score = renderText(std::to_string(board->getScore()),
@@ -362,7 +359,7 @@ void PlayState::render(GameEngine* game){
         board->render_score = false;
     }
     renderTexture(font_image_score,
-                  game->renderer, x + 60, y + board->WTH_PER_BLOCK);
+                  game->renderer, x + 60, y + Board::WTH_PER_BLOCK);
 
     int  block_x, block_y;
 
@@ -377,40 +374,40 @@ void PlayState::render(GameEngine* game){
         clips[i].h = 20;
     }
 
-    for(int i = 0; i < tetris->SIZE; i++){
-        block_x = tetris->getX(i)*board->WTH_PER_BLOCK + GAME_OFFSET;
-        block_y = tetris->getY(i)*board->WTH_PER_BLOCK + GAME_OFFSET;
+    for(int i = 0; i < Tetris::SIZE; i++){
+        block_x = tetris->getX(i)*Board::WTH_PER_BLOCK + GAME_OFFSET;
+        block_y = tetris->getY(i)*Board::WTH_PER_BLOCK + GAME_OFFSET;
 
         drawBlock(game, block_x, block_y, tetris->type, clips);
     }
 
     int shadow_y[4];
     tetris->getShadow(board, shadow_y);
-    for(int i = 0; i < tetris->SIZE; i++){
+    for(int i = 0; i < Tetris::SIZE; i++){
         if(shadow_y[i] < 0)
             break;
-        int x = tetris->getX(i)*board->WTH_PER_BLOCK + GAME_OFFSET;
-        int y = shadow_y[i]*board->WTH_PER_BLOCK + GAME_OFFSET;
+        int x = tetris->getX(i)*Board::WTH_PER_BLOCK + GAME_OFFSET;
+        int y = shadow_y[i]*Board::WTH_PER_BLOCK + GAME_OFFSET;
 
         SDL_SetRenderDrawColor(game->renderer, 180, 180, 180, 255);
-        SDL_Rect shadow_block = {x, y, board->WTH_PER_BLOCK, board->HEI_PER_BLOCK};
+        SDL_Rect shadow_block = {x, y, Board::WTH_PER_BLOCK, Board::HEI_PER_BLOCK};
         SDL_RenderFillRect(game->renderer, &shadow_block);
     }
 
     if(!game_over){
-        for(int i = 0; i < next_tetris->SIZE; i++){
-            block_x = next_tetris->getX(i)*board->WTH_PER_BLOCK;
-            block_y = next_tetris->getY(i)*board->HEI_PER_BLOCK;
+        for(int i = 0; i < Tetris::SIZE; i++){
+            block_x = next_tetris->getX(i)*Board::WTH_PER_BLOCK;
+            block_y = next_tetris->getY(i)*Board::HEI_PER_BLOCK;
 
             drawBlock(game, block_x, block_y, next_tetris->type, clips);
         }
     }
     //方块池待命方块
-    for(int i = 0; i < board->ROWS; i++)
-        for(int j = 0; j < board->COLS; j++)
+    for(int i = 0; i < Board::ROWS; i++)
+        for(int j = 0; j < Board::COLS; j++)
             if(board->color[i][j] != -1) {
-                block_x = j*board->WTH_PER_BLOCK + GAME_OFFSET;
-                block_y = i*board->HEI_PER_BLOCK + GAME_OFFSET;
+                block_x = j*Board::WTH_PER_BLOCK + GAME_OFFSET;
+                block_y = i*Board::HEI_PER_BLOCK + GAME_OFFSET;
 
                 drawBlock(game, block_x, block_y, board->color[i][j], clips);
             }
@@ -420,21 +417,21 @@ void PlayState::render(GameEngine* game){
     //方块池左边缘
     SDL_RenderDrawLine(game->renderer,
                        GAME_OFFSET, GAME_OFFSET,
-                       GAME_OFFSET, GAME_OFFSET+board->WINDOW_HEIGHT);
+                       GAME_OFFSET, GAME_OFFSET+Board::WINDOW_HEIGHT);
     //方块池右边缘
     SDL_RenderDrawLine(game->renderer,
-                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET,
-                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET+board->WINDOW_HEIGHT);
+                       GAME_OFFSET+Board::WINDOW_WIDTH, GAME_OFFSET,
+                       GAME_OFFSET+Board::WINDOW_WIDTH, GAME_OFFSET+Board::WINDOW_HEIGHT);
 
     //方块池顶边缘
     SDL_RenderDrawLine(game->renderer,
                        GAME_OFFSET, GAME_OFFSET,
-                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET);
+                       GAME_OFFSET+Board::WINDOW_WIDTH, GAME_OFFSET);
 
     //方块池底边缘
     SDL_RenderDrawLine(game->renderer,
-                       GAME_OFFSET, GAME_OFFSET+board->WINDOW_HEIGHT,
-                       GAME_OFFSET+board->WINDOW_WIDTH, GAME_OFFSET+board->WINDOW_HEIGHT);
+                       GAME_OFFSET, GAME_OFFSET+Board::WINDOW_HEIGHT,
+                       GAME_OFFSET+Board::WINDOW_WIDTH, GAME_OFFSET+Board::WINDOW_HEIGHT);
 
     if (game_over)
     {
@@ -447,7 +444,7 @@ void PlayState::render(GameEngine* game){
         music_engine->setAllSoundsPaused(true);
         renderTexture(font_image_game_over,
                       game->renderer, newgamex1,
-                      game->height-newgamey1+4*board->WTH_PER_BLOCK);
+                      game->height-newgamey1+4*Board::WTH_PER_BLOCK);
     }
 
     //显示内容

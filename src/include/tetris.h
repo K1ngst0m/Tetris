@@ -21,33 +21,33 @@ public:
     //改变坐标//
     void setPoint(int xx, int yy){x = xx; y = yy;}
 
-    void setX(int i, int new_x){x = new_x - relatLocate[i][0];}
-    void setY(int i, int new_y){y = new_y - relatLocate[i][1];}
+    void setX(int i, int new_x){x = new_x - relateLocate[i][0];}
+    void setY(int i, int new_y){y = new_y - relateLocate[i][1];}
     //获取坐标//
-    int getX(int i){return x + relatLocate[i][0];}
-    int getY(int i){return y + relatLocate[i][1];}
+    int getX(int i) const{return x + relateLocate[i][0];}
+    int getY(int i) const{return y + relateLocate[i][1];}
 
     void add_to_x(int x_offset){x += x_offset;}
 
 
     //方块操作
-    void rotateRight(); //右转
-    void rotateLeft();  //左转
+    void rotateRight() const; //右转
+    void rotateLeft() const;  //左转
 
     void getShadow(Board *board, int shadow_y[]);   //方块降落预览
 
-    int x, y;               //方块型相对位置中(0,0)的全局坐标
-    int (*relatLocate)[2];  //相对中心方块坐标
+    int x{}, y{};               //方块型相对位置中(0,0)的全局坐标
+    int (*relateLocate)[2];  //相对中心方块坐标
     int type;               //方块种类(0-6)
 
-    bool has_landed(){return status == LANDED;}
+    bool has_landed() const{return status == LANDED;}
     void lands() {status = LANDED;}
     void drop()  {status = FALLING;}
 
     ////开关////
     bool fall;      //是否快速下落
     bool speedup;   //是否加速
-    bool shift;     //左转(true)&&k,右转(false)
-    bool rotate;    //是否旋转
+    bool shift{};     //左转(true)&&k,右转(false)
+    bool rotate{};    //是否旋转
 };
 #endif

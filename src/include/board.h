@@ -15,13 +15,13 @@ public:
     static const int HEI_PER_BLOCK = WINDOW_HEIGHT / ROWS; //单行宽度
     static const int WTH_PER_BLOCK = WINDOW_WIDTH / COLS;  //单列高度
 
-    int color[ROWS][COLS];                      //二维数组表示方块坐标
+    int color[ROWS][COLS]{};                      //二维数组表示方块坐标
     bool render_score;                          //刷新分数
 
     Board();                                    //方块池初始化: 分数=0, 方块池清空
 
     void add_score(int add){score += add;}      //累加分数
-    int getScore(){return score;}               //获取分数, 渲染字体用
+    int getScore() const{return score;}         //获取分数, 渲染字体用
     int letItGo();                             //消除且计分
     bool add(Tetris* block);                    //方块堆叠
 

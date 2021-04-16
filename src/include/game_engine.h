@@ -1,8 +1,9 @@
 #ifndef SRC_GAME_ENGINE_H_
 #define SRC_GAME_ENGINE_H_
 
-#include<SDL2/SDL.h>
-#include<vector>
+#include <vector>
+#include <SDL2/SDL.h>
+#include "IrrKlang/irrKlang.h"
 
 class GameState;
 
@@ -22,7 +23,7 @@ public:
     void update();                      //启动事件更新
     void render();                      //启动渲染界面
 
-    bool runnning(){return !exit;}
+    bool running() const{return !exit;}
     void quit(){exit = true;}           //退出游戏(程序)
 
     //窗口长宽

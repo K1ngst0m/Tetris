@@ -1,8 +1,8 @@
-#include"menustate.h"
-#include"playstate.h"
-#include"reuse.h"
+#include"include/menustate.h"
+#include"include/playstate.h"
+#include"include/reuse.h"
 
-MenuState MenuState::m_menustate;
+MenuState MenuState::m_menu_state;
 
 void MenuState::init(GameEngine* game){
     play = false;

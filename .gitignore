@@ -1,1 +1,4 @@
 tetris
+**/**.o
+cmake-build-debug/
+*build*/

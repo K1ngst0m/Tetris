@@ -1,7 +1,6 @@
 //游戏引擎类, 用栈数据结构来管理三个界面, 初始化游戏, 创建窗口
-#include"game_engine.h"
-#include"gamestate.h"
-#include<iostream>
+#include "gamestate.h"
+#include <iostream>
 
 GameEngine::GameEngine(){
     SDL_Init(SDL_INIT_EVERYTHING);

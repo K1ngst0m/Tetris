@@ -1,5 +1,5 @@
-#include"tetris.h"
-#include"board.h"
+#include"include/tetris.h"
+#include"include/board.h"
 
 const int Tetris::block_table[7][4][2] = {
     {{0, -1}, {0, 0}, {-1, 0}, {-1, 1}},    //0   Z型
@@ -19,26 +19,26 @@ Tetris::Tetris(int n_type){
 
     status = INACTIVE;
     movement = NONE;
-    relatLocate = new int[4][2];
+    relateLocate = new int[4][2];
 
     for(int i = 0; i < 4; i++) {
-        relatLocate[i][0] = block_table[type][i][0];
-        relatLocate[i][1] = block_table[type][i][1];
+        relateLocate[i][0] = block_table[type][i][0];
+        relateLocate[i][1] = block_table[type][i][1];
     }
 
 }
-void Tetris::rotateLeft(){
+void Tetris::rotateLeft() const{
     for(int i = 0; i < SIZE; i++){
-        int t = relatLocate[i][0];
-        relatLocate[i][0] = -relatLocate[i][1];
-        relatLocate[i][1] = t;
+        int t = relateLocate[i][0];
+        relateLocate[i][0] = -relateLocate[i][1];
+        relateLocate[i][1] = t;
     }
 }
-void Tetris::rotateRight(){
+void Tetris::rotateRight() const{
     for(int i = 0; i < SIZE; i++){
-        int t = relatLocate[i][0];
-        relatLocate[i][0] = relatLocate[i][1];
-        relatLocate[i][1] = -t;
+        int t = relateLocate[i][0];
+        relateLocate[i][0] = relateLocate[i][1];
+        relateLocate[i][1] = -t;
     }
 }
 
@@ -48,7 +48,7 @@ void Tetris::getShadow(Board *board, int shadow_y[]){
 
     while(!has_landed()){
         for(int i = 0; i < SIZE; i++)
-            if(getY(i) == board->ROWS || board->color[getY(i)][getX(i)] != -1){
+            if(getY(i) == Board::ROWS || board->color[getY(i)][getX(i)] != -1){
                 lands();
                 y--;
                 break;
